@@ -1,0 +1,17 @@
+{
+  "_comment": "Replace the REPLACE_ME preset URLs with the exact one-tap search links from your celebrationlivingrealestate.com quick-search page.",
+  "fixed": {
+    "open_houses_url": "https://celebrationlivingrealestate.com/REPLACE_ME-open-houses",
+    "new_on_market_url": "https://celebrationlivingrealestate.com/REPLACE_ME-new-on-market",
+    "valuation_url": "https://celebrationlivingrealestate.com/home-valuation",
+    "market_report_url": "https://celebrationlivingrealestate.com/market-report"
+  },
+  "search_of_week_rotation": [
+    { "label": "Pool homes under $700K", "url": "https://celebrationlivingrealestate.com/REPLACE_ME-pool" },
+    { "label": "Waterfront homes", "url": "https://celebrationlivingrealestate.com/REPLACE_ME-waterfront" },
+    { "label": "New construction", "url": "https://celebrationlivingrealestate.com/REPLACE_ME-new-construction" },
+    { "label": "Homes under $499K", "url": "https://celebrationlivingrealestate.com/REPLACE_ME-under-499k" },
+    { "label": "Luxury homes $1M+", "url": "https://celebrationlivingrealestate.com/REPLACE_ME-luxury" },
+    { "label": "One-story homes", "url": "https://celebrationlivingrealestate.com/REPLACE_ME-one-story" }
+  ]
+}

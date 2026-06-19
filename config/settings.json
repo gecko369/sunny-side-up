@@ -1,0 +1,47 @@
+{
+  "brand": { "name": "The Celebration Life", "newsletter": "Sunny Side Up" },
+
+  "assets": {
+    "_comment": "After you turn on GitHub Pages, these resolve automatically. Until then, preview with the --embed flag.",
+    "base_url": "https://gecko369.github.io/sunny-side-up/assets",
+    "logo_color": "logo-color.png",
+    "logo_white": "logo-white.png",
+    "sunni_head": "sunni-headshot.png",
+    "sunni_full": "sunni-ask.png"
+  },
+
+  "mailchimp": {
+    "audience_id": "256260bd26",
+    "from_name": "Sunni \u00b7 The Celebration Life",
+    "from_email": "sunni@livethecelebrationlife.com",
+    "reply_to": "REPLACE_WITH_YOUR_EMAIL@example.com",
+    "tags": {
+      "en": "tcl_english_newsletter",
+      "es": "tcl_espanol_newsletter",
+      "pt": "tcl_portugues_newsletter"
+    },
+    "subject": {
+      "en": "Your week in Celebration \u2600\ufe0f",
+      "es": "Tu semana en Celebration \u2600\ufe0f",
+      "pt": "Sua semana em Celebration \u2600\ufe0f"
+    }
+  },
+
+  "bd": { "website_id": "55356", "blog_data_id": "14", "events_data_id": "8", "coupons_data_id": "7" },
+
+  "google_sheet": { "id": "14L8q3D7-uCvbMffaOIgeDdzcOu736POVMGqTEzQWzlI" },
+
+  "links": {
+    "_comment": "Replace the REPLACE_ME ones with your real URLs.",
+    "events_all": "https://www.livethecelebrationlife.com/events",
+    "blog_all": "https://www.livethecelebrationlife.com/blog",
+    "deals_all": "https://www.livethecelebrationlife.com/deals",
+    "ask_sunni": "https://www.livethecelebrationlife.com/sunni",
+    "facebook": "https://www.facebook.com/groups/REPLACE_ME",
+    "instagram": "https://www.instagram.com/REPLACE_ME",
+    "app": "https://www.livethecelebrationlife.com/app",
+    "submit": "https://www.livethecelebrationlife.com/submit",
+    "nominate": "https://www.livethecelebrationlife.com/nominate",
+    "list_business": "https://www.livethecelebrationlife.com/join"
+  }
+}

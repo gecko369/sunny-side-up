@@ -1,0 +1,38 @@
+{
+  "_comment": "guides: keyed by month number (1-12). If a month has no entry, 'default' (The Bright Pages evergreen guide) is used. did_you_know rotates weekly.",
+  "guides": {
+    "7": {
+      "label": "The Almanac",
+      "title": "Your 4th of July in Celebration",
+      "body": "The complete, no-stress guide to Independence Day around town \u2014 where to catch the fireworks, the parade route, family-friendly cookouts, and the spots that book up fast. Save it, share it, plan around it.",
+      "url": "https://www.livethecelebrationlife.com/guides/4th-of-july",
+      "cta": "Get the free guide"
+    },
+    "10": {
+      "label": "The Almanac",
+      "title": "Halloween in Celebration",
+      "body": "Trick-or-treat maps, the best-decorated streets, family events, and where to grab the cutest costumes in town.",
+      "url": "https://www.livethecelebrationlife.com/guides/halloween",
+      "cta": "Get the free guide"
+    },
+    "12": {
+      "label": "The Almanac",
+      "title": "The Holidays in Celebration",
+      "body": "Now Snowing on Market Street, tree lightings, holiday markets, and the can't-miss lights \u2014 your whole December, sorted.",
+      "url": "https://www.livethecelebrationlife.com/guides/holidays",
+      "cta": "Get the free guide"
+    },
+    "default": {
+      "label": "The Bright Pages",
+      "title": "The Newcomer's Guide to Celebration",
+      "body": "New to town or just love it here? The essential local handbook \u2014 the best eats, the parks, the must-knows, and the little secrets that make Celebration home.",
+      "url": "https://www.livethecelebrationlife.com/guides/newcomer",
+      "cta": "Open the guide"
+    }
+  },
+  "did_you_know": [
+    { "headline": "Celebration was dreamed up by Disney back in 1996.", "body": "And every December, Market Street still \"snows\" on the hour \u2014 soap-foam flurries and all. Now you've got something to say at the cookout. \ud83d\ude09" },
+    { "headline": "Celebration sees about 233 sunny days a year.", "body": "That's roughly two out of every three. You're welcome." },
+    { "headline": "Celebration's downtown was designed to be fully walkable.", "body": "From the lakefront to Market Street, almost everything's a stroll away \u2014 by design." }
+  ]
+}
