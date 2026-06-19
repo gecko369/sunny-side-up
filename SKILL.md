@@ -1,4 +1,4 @@
-[SKILL.md](https://github.com/user-attachments/files/29148358/SKILL.md)
+[SKILL.md](https://github.com/user-attachments/files/29150072/SKILL.md)
 ---
 name: sunny-side-up
 description: Build the weekly "Sunny Side Up" newsletter for The Celebration Life in English, Spanish, and Portuguese, and create the three Mailchimp draft campaigns for review. Use when asked to build, generate, or run the Sunny Side Up newsletter for an upcoming Thursday.
@@ -23,17 +23,16 @@ Using the Google Drive / Sheets connector, open the sheet with ID from `settings
 - If the row is blank or missing, use sensible picks from the BD content you pull in Step 2 and note it in the summary email.
 
 ## Step 2 — Pull dynamic content from the Brilliant Directories site
-Using the Brilliant Directories connector (website_id in `settings.json` → `bd.website_id`):
-- **Events** (last/next 7 days, weekend-weighted): up to 5. Capture name, day, time, place.
-- **Blog** posts published in the last 7 days: newest 3.
-- **Deals / coupons** currently active: up to 3 (name, short description, a short tag like "BOGO").
-- **Storefront** (business spotlight) and **Bright Spot** (resident/nonprofit): for each, grab the post's **featured image URL** (the full `https://…` image link from the BD post). Put it in `storefront.photo_url` / `bright_spot.photo_url`. These render as the photo at the top of each card. If a post genuinely has no image, leave `photo_url` as an empty string `""` — the card then shows cleanly with no photo (no placeholder box).
+Using the Brilliant Directories connector (website_id in `settings.json` → `bd.website_id`). **Every item that has a post on the site must include its `url`** (the full `https://…` link to that post) — events, deals, and the Locally Loved businesses all link to their post when `url` is set, and show as plain text when it's missing. Don't leave them blank.
+- **Events** (last/next 7 days, weekend-weighted): up to 5. Capture `name`, `day`, `meta` (time · place), and **`url`** (the event post link).
+- **Blog** posts published in the last 7 days: newest 3 — `title`, `tease`, `url`.
+- **Deals / coupons** currently active: up to 3 — `name`, short `desc`, a short `tag` like "BOGO", and **`url`** (the coupon/deal post link).
+- **Locally Loved (`alist`)**: `cat`, `name`, a short `desc`, `cta`, and **`url`**. ⚠️ **Do NOT put street addresses or phone numbers in `desc`** — email clients auto-link them and they hijack taps (open Maps/dialer). Keep `desc` to a short plain teaser; the whole card is the link.
+- **Storefront** (business spotlight) and **Bright Spot** (resident/nonprofit): write `title`, `body`, `cta`, `url`, **and `photo_url`**. To get `photo_url`, take the post's image as a full `https://…` URL, in this order: (1) the post's featured-image field (e.g. `featured_image` / `image` / `photo` / `thumbnail` / `main_image`); (2) if none, the `src` of the first `<img>` in the post body HTML; (3) if still none, fetch the post URL and read its `og:image` meta tag. Only leave `photo_url` as `""` if the article truly has no image. Make sure it begins with `https://` (convert any relative path to absolute using the site domain).
 Keep it factual — only use what's really on the site.
 
-## Step 3 — Real estate (rotation)
-From `config/real-estate.json`:
-- `open_houses_url`, `new_on_market_url`, `valuation_url` are fixed.
-- **Search of the Week** = `search_of_week_rotation[ week_number % len ]` (label + url).
+## Step 3 — Real estate
+The four real-estate tile **links are pulled automatically from `config/real-estate.json` by `assemble.py`** — you do **not** write them into the content JSON, and you must **never** output `REPLACE_ME` or `#`. `open_houses_url`, `new_on_market_url`, and `valuation_url` come straight from that file; **Search of the Week** rotates weekly from `search_of_week_rotation` on its own. You may optionally set `real_estate.search_label` (and `real_estate.search_url`) in the content JSON to override that week's pick — otherwise leave `real_estate` as `{}`.
 
 ## Step 4 — Guide + Did You Know
 From `config/content-calendar.json`:
