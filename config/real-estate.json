@@ -7,12 +7,33 @@
     "market_report_url": "https://celebrationlivingrealestate.com/market-report"
   },
   "search_of_week_rotation": [
-    { "label": "Pool Homes", "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&basementYn=true" },
-    { "label": "Waterfront homes", "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&waterFrontYn=true" },
-    { "label": "New construction", "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&newConstructionYn=true" },
-    { "label": "Homes under $499K", "url": "https://celebrationlivingrealestate.com/listings?boardId=32&maxListPrice=499999&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753" },
-    { "label": "Luxury homes $1M+", "url": "https://celebrationlivingrealestate.com/listings?boardId=32&minListPrice=1000000&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753" },
-    { "label": "One-story homes", "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&oneStoryYn=true" }
-    { "label": "Price Reduced Homes", "url": "https://celebrationlivingrealestate.com/listings?boardId=32&bedrooms=0&bathCount=0&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&misc6Yn=true" }
+    {
+      "label": "Pool Homes",
+      "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&basementYn=true"
+    },
+    {
+      "label": "Waterfront homes",
+      "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&waterFrontYn=true"
+    },
+    {
+      "label": "New construction",
+      "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&newConstructionYn=true"
+    },
+    {
+      "label": "Homes under $499K",
+      "url": "https://celebrationlivingrealestate.com/listings?boardId=32&maxListPrice=499999&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753"
+    },
+    {
+      "label": "Luxury homes $1M+",
+      "url": "https://celebrationlivingrealestate.com/listings?boardId=32&minListPrice=1000000&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753"
+    },
+    {
+      "label": "One-story homes",
+      "url": "https://celebrationlivingrealestate.com/listings?boardId=32&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&oneStoryYn=true"
+    },
+    {
+      "label": "Price Reduced Homes",
+      "url": "https://celebrationlivingrealestate.com/listings?boardId=32&bedrooms=0&bathCount=0&propertyType=SFR,CND&status=active&sort=importDate&dateRange=0&cityId=3753&misc6Yn=true"
+    }
   ]
 }
