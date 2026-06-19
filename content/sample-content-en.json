@@ -1,44 +1,81 @@
 {
-  "issue_line": "Thursday \u00b7 June 25, 2026 \u00b7 Issue No. 1",
-  "preheader": "This weekend in Celebration: live music on the lake, open houses, sweet local deals, and good news \u2014 from Sunni. \u2600\ufe0f",
-  "forecast": "<strong>Well, good mornin', Celebration!</strong> Pour yourself some sweet tea and pull up a chair \u2014 it's a beauty out there. 89\u00b0 and blue skies clear through Sunday, with a quick afternoon sprinkle around 4 to keep the lawns happy. Pool mornings, porch evenings \u2014 that's the assignment, hunni.<br><br>The 4th is one week out and the whole town's hummin'. I rounded up your weekend, three reads worth your while, the open houses you'll want to walk, and a deal that'll make you grin. <strong>\u2014 Sunni</strong>",
+  "issue_line": "Thursday · June 25, 2026 · Issue No. 1",
+  "preheader": "This weekend in Celebration: live music on the lake, open houses, sweet local deals, and good news — from Sunni. ☀️",
+  "forecast": "<strong>Well, good mornin', Celebration!</strong> Pour yourself some sweet tea and pull up a chair — it's a beauty out there. 89° and blue skies clear through Sunday, with a quick afternoon sprinkle around 4 to keep the lawns happy. Pool mornings, porch evenings — that's the assignment, hunni.<br><br>The 4th is one week out and the whole town's hummin'. I rounded up your weekend, three reads worth your while, the open houses you'll want to walk, and a deal that'll make you grin. <strong>— Sunni</strong>",
   "top_billing": {
     "title": "Summer Nights: Live Music on the Lakefront",
-    "when": "Saturday \u00b7 7:00 PM \u00b7 The Lakeside Lawn \u00b7 Free",
-    "body": "If you do just one thing this weekend, sugar, make it this one. The summer concert series is back out on the water \u2014 bring a blanket, grab a bite from the food trucks, and stay for that sunset over the lake. Lawns open at 6, music at 7. I'll save you a spot.",
+    "when": "Saturday · 7:00 PM · The Lakeside Lawn · Free",
+    "body": "If you do just one thing this weekend, sugar, make it this one. The summer concert series is back out on the water — bring a blanket, grab a bite from the food trucks, and stay for that sunset over the lake. Lawns open at 6, music at 7. I'll save you a spot.",
     "url": "https://www.livethecelebrationlife.com/events/summer-nights",
     "cta": "Get the details"
   },
   "events": [
-    { "day": "Fri", "name": "Food Truck Friday", "meta": "Town Center \u00b7 5\u20139 PM \u00b7 12+ trucks, live DJ" },
-    { "day": "Sat", "name": "Farmers Market on Market Street", "meta": "9 AM\u20131 PM \u00b7 produce, makers, coffee" },
-    { "day": "Sat", "name": "Summer Nights Concert \u2600\ufe0f", "meta": "The Lakeside Lawn \u00b7 7 PM \u00b7 free" },
-    { "day": "Sun", "name": "Sunrise Yoga by the Lake", "meta": "Lakeside Park \u00b7 7:30 AM \u00b7 $10 drop-in" },
-    { "day": "Sun", "name": "Lake Nona Night Market", "meta": "Boxi Park \u00b7 4\u20139 PM \u00b7 worth the short drive" }
+    {
+      "day": "Fri",
+      "name": "Food Truck Friday",
+      "meta": "Town Center · 5–9 PM · 12+ trucks, live DJ",
+      "url": "https://www.livethecelebrationlife.com/events/sample-1"
+    },
+    {
+      "day": "Sat",
+      "name": "Farmers Market on Market Street",
+      "meta": "9 AM–1 PM · produce, makers, coffee",
+      "url": "https://www.livethecelebrationlife.com/events/sample-2"
+    },
+    {
+      "day": "Sat",
+      "name": "Summer Nights Concert ☀️",
+      "meta": "The Lakeside Lawn · 7 PM · free",
+      "url": "https://www.livethecelebrationlife.com/events/sample-3"
+    },
+    {
+      "day": "Sun",
+      "name": "Sunrise Yoga by the Lake",
+      "meta": "Lakeside Park · 7:30 AM · $10 drop-in",
+      "url": "https://www.livethecelebrationlife.com/events/sample-4"
+    },
+    {
+      "day": "Sun",
+      "name": "Lake Nona Night Market",
+      "meta": "Boxi Park · 4–9 PM · worth the short drive",
+      "url": "https://www.livethecelebrationlife.com/events/sample-5"
+    }
   ],
   "blog": [
-    { "title": "12 Ways to Beat the Florida Heat Without Leaving Celebration", "tease": "Splash pads, shady patios, and the AC-blasted spots locals swear by.", "url": "https://www.livethecelebrationlife.com/blog/beat-the-heat" },
-    { "title": "Hurricane Season Prep: The Celebration Checklist", "tease": "What to stock, what to ignore, and the one thing everyone forgets.", "url": "https://www.livethecelebrationlife.com/blog/hurricane-prep" },
-    { "title": "The Story Behind Market Street's Newest Caf\u00e9", "tease": "Two neighbors, one espresso machine, and a very good croissant.", "url": "https://www.livethecelebrationlife.com/blog/new-cafe" }
+    {
+      "title": "12 Ways to Beat the Florida Heat Without Leaving Celebration",
+      "tease": "Splash pads, shady patios, and the AC-blasted spots locals swear by.",
+      "url": "https://www.livethecelebrationlife.com/blog/beat-the-heat"
+    },
+    {
+      "title": "Hurricane Season Prep: The Celebration Checklist",
+      "tease": "What to stock, what to ignore, and the one thing everyone forgets.",
+      "url": "https://www.livethecelebrationlife.com/blog/hurricane-prep"
+    },
+    {
+      "title": "The Story Behind Market Street's Newest Café",
+      "tease": "Two neighbors, one espresso machine, and a very good croissant.",
+      "url": "https://www.livethecelebrationlife.com/blog/new-cafe"
+    }
   ],
   "storefront": {
     "title": "Meet the folks at Bloom & Vine",
-    "body": "You've walked past the little flower shop on Front Street a hundred times \u2014 but did you know owner Maria started it from a card table at the farmers market three years ago? We sat down with her to talk slow mornings, local growers, and why she'll always hand-tie a bouquet for a stranger having a hard day.",
+    "body": "You've walked past the little flower shop on Front Street a hundred times — but did you know owner Maria started it from a card table at the farmers market three years ago? We sat down with her to talk slow mornings, local growers, and why she'll always hand-tie a bouquet for a stranger having a hard day.",
     "url": "https://www.livethecelebrationlife.com/blog/bloom-and-vine",
-    "photo_url": "",
+    "photo_url": "https://picsum.photos/seed/storefront/600/320",
     "cta": "Read their story"
   },
   "bright_spot": {
     "title": "The Pattersons turned a lemonade stand into $5,000 for neighbors in need",
-    "body": "What started as three kids and a folding table on Sycamore Street has become a summer tradition \u2014 and this year, every cup sold went straight to the Osceola food bank. We met the family behind Celebration's sweetest little fundraiser.",
+    "body": "What started as three kids and a folding table on Sycamore Street has become a summer tradition — and this year, every cup sold went straight to the Osceola food bank. We met the family behind Celebration's sweetest little fundraiser.",
     "url": "https://www.livethecelebrationlife.com/blog/the-pattersons",
-    "photo_url": "",
+    "photo_url": "https://picsum.photos/seed/brightspot/600/320",
     "cta": "Meet the Pattersons"
   },
   "guide": {
     "label": "The Almanac",
     "title": "Your 4th of July in Celebration",
-    "body": "The complete, no-stress guide to Independence Day around town \u2014 where to catch the fireworks, the parade route, family-friendly cookouts, and the spots that book up fast. Save it, share it, plan around it.",
+    "body": "The complete, no-stress guide to Independence Day around town — where to catch the fireworks, the parade route, family-friendly cookouts, and the spots that book up fast. Save it, share it, plan around it.",
     "url": "https://www.livethecelebrationlife.com/guides/4th-of-july",
     "cta": "Get the free guide"
   },
@@ -50,23 +87,62 @@
     "valuation_url": "https://celebrationlivingrealestate.com/home-valuation"
   },
   "deals": [
-    { "name": "The Corner Scoop", "desc": "Buy one, get one free \u2014 all weekend", "tag": "BOGO" },
-    { "name": "Celebration Nails & Spa", "desc": "$15 off any 60-min service", "tag": "$15 OFF" },
-    { "name": "Front Street Bistro", "desc": "Free dessert with two entr\u00e9es", "tag": "FREE" }
+    {
+      "name": "The Corner Scoop",
+      "desc": "Buy one, get one free — all weekend",
+      "tag": "BOGO",
+      "url": "https://www.livethecelebrationlife.com/deals/sample-1"
+    },
+    {
+      "name": "Celebration Nails & Spa",
+      "desc": "$15 off any 60-min service",
+      "tag": "$15 OFF",
+      "url": "https://www.livethecelebrationlife.com/deals/sample-2"
+    },
+    {
+      "name": "Front Street Bistro",
+      "desc": "Free dessert with two entrées",
+      "tag": "FREE",
+      "url": "https://www.livethecelebrationlife.com/deals/sample-3"
+    }
   ],
   "alist": [
-    { "cat": "Florist \u00b7 Front Street", "name": "Bloom & Vine", "desc": "Hand-tied bouquets & same-day delivery.", "url": "#", "cta": "Learn more", "emoji": "\ud83c\udf38", "emoji_bg": "#E7F8F5" },
-    { "cat": "Dentistry \u00b7 Lake Nona", "name": "Lakeside Dental", "desc": "Family & cosmetic care. New patients welcome.", "url": "#", "cta": "Book a visit", "emoji": "\ud83e\uddb7", "emoji_bg": "#FFF6D8" },
-    { "cat": "Restaurant \u00b7 Market Street", "name": "Front Street Bistro", "desc": "Wood-fired Italian with the best patio in town.", "url": "#", "cta": "See the menu", "emoji": "\ud83c\udf5d", "emoji_bg": "#FFECE0" }
+    {
+      "cat": "Florist · Front Street",
+      "name": "Bloom & Vine",
+      "desc": "Hand-tied bouquets & same-day delivery.",
+      "url": "#",
+      "cta": "Learn more",
+      "emoji": "🌸",
+      "emoji_bg": "#E7F8F5"
+    },
+    {
+      "cat": "Dentistry · Lake Nona",
+      "name": "Lakeside Dental",
+      "desc": "Family & cosmetic care. New patients welcome.",
+      "url": "#",
+      "cta": "Book a visit",
+      "emoji": "🦷",
+      "emoji_bg": "#FFF6D8"
+    },
+    {
+      "cat": "Restaurant · Market Street",
+      "name": "Front Street Bistro",
+      "desc": "Wood-fired Italian with the best patio in town.",
+      "url": "#",
+      "cta": "See the menu",
+      "emoji": "🍝",
+      "emoji_bg": "#FFECE0"
+    }
   ],
   "giveaway": {
     "title": "Win a $100 Market Street gift card",
-    "body": "Spend it however you like \u2014 dinner, a fresh bouquet, a new pair of shades. Enter in ten seconds; I'll draw one lucky neighbor at the end of the month. Pop back each Thursday to boost your odds \u2014 it's on us, hunni.",
+    "body": "Spend it however you like — dinner, a fresh bouquet, a new pair of shades. Enter in ten seconds; I'll draw one lucky neighbor at the end of the month. Pop back each Thursday to boost your odds — it's on us, hunni.",
     "url": "https://www.livethecelebrationlife.com/giveaway",
     "cta": "Enter to win"
   },
   "did_you_know": {
     "headline": "Celebration was dreamed up by Disney back in 1996.",
-    "body": "And every December, Market Street still \"snows\" on the hour \u2014 soap-foam flurries and all. Now you've got something to say at the cookout. \ud83d\ude09"
+    "body": "And every December, Market Street still \"snows\" on the hour — soap-foam flurries and all. Now you've got something to say at the cookout. 😉"
   }
 }
