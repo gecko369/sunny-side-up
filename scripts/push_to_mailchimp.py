@@ -14,7 +14,19 @@ import argparse, json, os, sys
 import requests
 from requests.auth import HTTPBasicAuth
 
+def _load_dotenv():
+    """Load KEY=VALUE lines from a .env file in the repo root, if present."""
+    root=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    path=os.path.join(root, ".env")
+    if os.path.exists(path):
+        for line in open(path, encoding="utf-8"):
+            line=line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k,v=line.split("=",1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
 def main():
+    _load_dotenv()
     ap=argparse.ArgumentParser()
     ap.add_argument("--html", required=True)
     ap.add_argument("--lang", required=True, choices=["en","es","pt"])
