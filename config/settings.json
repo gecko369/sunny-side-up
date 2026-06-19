@@ -1,6 +1,8 @@
 {
-  "brand": { "name": "The Celebration Life", "newsletter": "Sunny Side Up" },
-
+  "brand": {
+    "name": "The Celebration Life",
+    "newsletter": "Sunny Side Up"
+  },
   "assets": {
     "_comment": "After you turn on GitHub Pages, these resolve automatically. Until then, preview with the --embed flag.",
     "base_url": "https://gecko369.github.io/sunny-side-up/assets",
@@ -9,10 +11,9 @@
     "sunni_head": "sunni-headshot.png",
     "sunni_full": "sunni-ask.png"
   },
-
   "mailchimp": {
     "audience_id": "256260bd26",
-    "from_name": "Sunni \u00b7 The Celebration Life",
+    "from_name": "Sunni · The Celebration Life",
     "from_email": "sunni@livethecelebrationlife.com",
     "reply_to": "hello@livethecelebrationlife.com",
     "tags": {
@@ -21,23 +22,28 @@
       "pt": "tcl_portugues_newsletter"
     },
     "subject": {
-      "en": "Your week in Celebration \u2600\ufe0f",
-      "es": "Tu semana en Celebration \u2600\ufe0f",
-      "pt": "Sua semana em Celebration \u2600\ufe0f"
+      "en": "Your week in Celebration ☀️",
+      "es": "Tu semana en Celebration ☀️",
+      "pt": "Sua semana em Celebration ☀️"
     }
   },
-
-  "bd": { "website_id": "55356", "blog_data_id": "14", "events_data_id": "8", "coupons_data_id": "7" },
-
-  "google_sheet": { "id": "14L8q3D7-uCvbMffaOIgeDdzcOu736POVMGqTEzQWzlI" },
-
+  "bd": {
+    "website_id": "55356",
+    "blog_data_id": "14",
+    "events_data_id": "8",
+    "coupons_data_id": "7"
+  },
+  "google_sheet": {
+    "id": "14L8q3D7-uCvbMffaOIgeDdzcOu736POVMGqTEzQWzlI"
+  },
   "links": {
-    "_comment": "Replace the REPLACE_ME ones with your real URLs.",
+    "_comment": "facebook = your Backyard GROUP (used by the Backyard card). facebook_page = your brand PAGE (used in the footer).",
     "events_all": "https://www.livethecelebrationlife.com/events",
     "blog_all": "https://www.livethecelebrationlife.com/blog",
     "deals_all": "https://www.livethecelebrationlife.com/deals",
     "ask_sunni": "https://www.livethecelebrationlife.com/sunni",
     "facebook": "https://www.facebook.com/groups/thecelebrationbackyard/",
+    "facebook_page": "https://www.facebook.com/thecelebrationlife/",
     "instagram": "https://www.instagram.com/thecelebrationlife",
     "app": "https://www.livethecelebrationlife.com/app",
     "submit": "https://www.livethecelebrationlife.com/submit",
