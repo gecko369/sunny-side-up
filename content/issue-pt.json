@@ -1,0 +1,65 @@
+{
+  "issue_line": "Quinta-feira · 25 de junho de 2026 · Edição Nº 1",
+  "preheader": "Neste fim de semana em Celebration: uma festa à beira do lago, shows gratuitos na sexta, a feira de produtores no domingo, ofertas locais e boas notícias — da Sunni. ☀️",
+  "forecast": "<strong>Bom dia, Celebration!</strong> Pega uma bebida bem gelada e senta um pouquinho — o verão está se exibindo lá fora. Manhãs de céu azul, máximas por volta dos 32°, e uma daquelas chuvas rápidas de fim de tarde que molham o gramado e passam antes do jantar. Piscina antes do meio-dia, varanda depois — é esse o plano, meu bem.<br><br>O 4 de Julho está a pouco mais de uma semana e a cidade toda já está animada. Preparei o seu fim de semana, três boas leituras, as ofertas que valem a pena e uma boa notícia pra começar com alegria. <strong>— Sunni</strong>",
+  "top_billing": {
+    "title": "Grande Festa de Bairro Americana no Boxi Park",
+    "when": "De quinta a domingo · Boxi Park, Lake Nona · Grátis",
+    "body": "Se você for fazer só uma coisa neste fim de semana, meu bem, que seja esta. O Boxi Park promove sua grande festa de bairro o fim de semana inteiro — música ao vivo, food trucks de montão, bebidas geladas e espaço pras crianças (e os cachorros) correrem. Apareça em qualquer noite, coma alguma coisa e fique pro pôr do sol sobre o Lake Nona. Guardo um lugar na mesa pra você.",
+    "url": "https://www.livethecelebrationlife.com/events/great-american-block-party-boxi-park-lake-nona",
+    "cta": "Ver os detalhes"
+  },
+  "events": [
+    { "day": "Sex", "name": "Fridays on the Plaza", "meta": "Winter Garden · show gratuito ao ar livre", "url": "https://www.livethecelebrationlife.com/events/fridays-on-the-plaza-free-concerts-in-winter-garden" },
+    { "day": "Sex", "name": "Movie in the Park: National Treasure", "meta": "Orla do lago de St. Cloud · 19h30 · grátis, leve uma manta", "url": "https://www.livethecelebrationlife.com/events/movie-in-the-park-national-treasure-in-st-cloud" },
+    { "day": "Sáb", "name": "Walk With Team Kareem", "meta": "Orla do lago de Kissimmee · 8h · caminhada comunitária pela segurança na água", "url": "https://www.livethecelebrationlife.com/events/walk-with-team-kareem-drowning-prevention" },
+    { "day": "Dom", "name": "Celebration Farmers Market", "meta": "Town Center · domingo de manhã · hortifrúti, artesãos e café", "url": "https://www.livethecelebrationlife.com/events/celebration-farmers-market-sundays-at-town-center" },
+    { "day": "Dom", "name": "Guns N' Roses Tribute: Nightrain", "meta": "The Wharf no Sunset Walk · 17h", "url": "https://www.livethecelebrationlife.com/events/guns-n-roses-tribute-nightrain-at-the-wharf" }
+  ],
+  "blog": [
+    { "title": "Workshops criativos e aulas de arte perto de Celebration", "tease": "Onde pôr a mão na massa neste verão — cerâmica, pintura e mais.", "url": "https://www.livethecelebrationlife.com/blog/creative-workshops-and-art-classes-near-celebration-fl-in-2026" },
+    { "title": "Os melhores estúdios de yoga e pilates perto de Celebration", "tease": "Ache o seu ritmo — os estúdios que a vizinhança recomenda.", "url": "https://www.livethecelebrationlife.com/blog/the-best-yoga-and-pilates-studios-near-celebration-fl" },
+    { "title": "Por dentro da reserva natural de 1.900 hectares de Celebration", "tease": "Fauna, trilhas e exatamente o que esperar por lá.", "url": "https://www.livethecelebrationlife.com/blog/exploring-celebration-fl-s-4-700-acre-nature-reserve-wildlife-trails-and-what-to-expect" }
+  ],
+  "storefront": {
+    "title": "Uma noite na cidade, do jeito local",
+    "body": "Hoje pula a viagem até os parques, meu bem — o Town Center dá conta. Reunimos pra onde os locais vão de verdade quando anoitece: as mesas pra ficar sem pressa, a cerveja artesanal bem gelada e os cantos pra um último drinque antes de voltar pra casa. Um date, uma saída com amigos ou só porque sim — tudo a uma caminhada.",
+    "url": "https://www.livethecelebrationlife.com/blog/here-s-what-locals-do-for-a-night-out-dining-craft-beer-and-entertainment-in-the-town-center",
+    "photo_url": "https://www.livethecelebrationlife.com/uploads/news-pictures/5-new-york-blog-post-image-20260616163933.webp",
+    "cta": "Ver a lista"
+  },
+  "bright_spot": {
+    "title": "Parabéns pelos 30, Celebration!",
+    "body": "Dá pra acreditar? Nossa cidadezinha completou 30 anos este mês. De um projeto da Disney em 1996 à comunidade de varandas e lago que conhecemos hoje, muita coisa mudou (e muita coisa boa continua igual). Voltamos no tempo pra ver como Celebration cresceu — e o que a faz ser um lar em 2026.",
+    "url": "https://www.livethecelebrationlife.com/blog/celebration-fl-turned-30-this-month-and-the-town-has-changed",
+    "photo_url": "https://www.livethecelebrationlife.com/uploads/news-pictures/pphoto-159.webp",
+    "cta": "Ver a retrospectiva"
+  },
+  "guide": {
+    "label": "The Almanac",
+    "title": "Seu 4 de Julho em Celebration",
+    "body": "O guia completo e sem estresse pro Dia da Independência na cidade — onde ver os fogos, o trajeto do desfile, os churrascos em família e os lugares que lotam rápido. Salve, compartilhe e planeje com ele.",
+    "url": "https://www.livethecelebrationlife.com/guides/4th-of-july",
+    "cta": "Baixar o guia grátis"
+  },
+  "real_estate": { "search_label": "Casas de luxo $1M+" },
+  "deals": [
+    { "name": "Celebration Wellness Spa", "desc": "$11 no Botox — o mês de junho inteiro", "tag": "$11 BOTOX", "url": "https://www.livethecelebrationlife.com/coupons/11-botox-all-june-at-celebration-wellness-spa" },
+    { "name": "Club Pilates Celebration", "desc": "Sua primeira aula de reformer é grátis", "tag": "FREE", "url": "https://www.livethecelebrationlife.com/coupons/free-pilates-intro-class-at-club-pilates-celebration" },
+    { "name": "Lumos Dental Studio", "desc": "Avaliação e limpeza para novo paciente por $125", "tag": "$125", "url": "https://www.livethecelebrationlife.com/coupons/125-new-patient-special-at-lumos-dental-studio" }
+  ],
+  "alist": [
+    { "cat": "Marketing e IA · Winter Garden", "name": "Geckonaut Agency", "desc": "Agentes de voz com IA, sites e marketing para negócios locais.", "url": "https://www.livethecelebrationlife.com/united-states/winter-garden/top-category/geckonaut-agency", "cta": "Ver o perfil", "emoji": "🦎", "emoji_bg": "#E7F8F5" },
+    { "cat": "Quiropraxia e bem-estar · Kissimmee", "name": "Dishman Chiropractic & Wellness Center", "desc": "Cuidado quiroprático e de bem-estar para a família toda.", "url": "https://www.livethecelebrationlife.com/united-states/kissimmee/top-category/dishman-chiropractic-and-wellness-center-inc", "cta": "Ver o perfil", "emoji": "🩺", "emoji_bg": "#FFF6D8" }
+  ],
+  "giveaway": {
+    "title": "Ganhe um vale-presente de $100 pra Market Street",
+    "body": "Gaste como quiser — um jantar a dois, um buquê fresco, um óculos novo. Participe em dez segundos e vou sortear um vizinho de sorte no fim do mês. Volte toda quinta pra aumentar suas chances — é por nossa conta, meu bem.",
+    "url": "https://www.livethecelebrationlife.com/giveaway",
+    "cta": "Participar"
+  },
+  "did_you_know": {
+    "headline": "O centro de Celebration foi projetado pra ser percorrido a pé.",
+    "body": "Da orla do lago até a Market Street, quase tudo fica a uma caminhada de distância — de propósito."
+  }
+}

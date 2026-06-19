@@ -1,0 +1,65 @@
+{
+  "issue_line": "Thursday · June 25, 2026 · Issue No. 1",
+  "preheader": "This weekend in Celebration: a block party by the lake, free Friday concerts, the Sunday farmers market, sweet local deals, and good news — from Sunni. ☀️",
+  "forecast": "<strong>Well, good mornin', Celebration!</strong> Pour yourself something cold and pull up a chair — summer's showing off out there. Look for blue-sky mornings, highs right around 90°, and one of those classic afternoon pop-up storms that rolls through, waters the lawn, and clears out by supper. Pool before noon, porch after — that's the plan, hunni.<br><br>The 4th of July is just over a week out and the whole town's already buzzin'. I rounded up your weekend, three good reads, the deals worth your while, and a little good news to start things sunny. <strong>— Sunni</strong>",
+  "top_billing": {
+    "title": "Great American Block Party at Boxi Park",
+    "when": "Thursday–Sunday · Boxi Park, Lake Nona · Free",
+    "body": "If you do one thing this weekend, sugar, make it this. Boxi Park throws its big Great American Block Party all weekend long — live music, food trucks galore, cold drinks, and room for the kids (and the pups) to run. Roll in any evening, grab a bite, and stay for that Lake Nona sunset. I'll save you a picnic table.",
+    "url": "https://www.livethecelebrationlife.com/events/great-american-block-party-boxi-park-lake-nona",
+    "cta": "Get the details"
+  },
+  "events": [
+    { "day": "Fri", "name": "Fridays on the Plaza", "meta": "Winter Garden · free outdoor concert under the lights", "url": "https://www.livethecelebrationlife.com/events/fridays-on-the-plaza-free-concerts-in-winter-garden" },
+    { "day": "Fri", "name": "Movie in the Park: National Treasure", "meta": "St. Cloud Lakefront · 7:30 PM · free, bring a blanket", "url": "https://www.livethecelebrationlife.com/events/movie-in-the-park-national-treasure-in-st-cloud" },
+    { "day": "Sat", "name": "Walk With Team Kareem", "meta": "Kissimmee Lakefront · 8 AM · water-safety community walk", "url": "https://www.livethecelebrationlife.com/events/walk-with-team-kareem-drowning-prevention" },
+    { "day": "Sun", "name": "Celebration Farmers Market", "meta": "Town Center · Sunday morning · produce, makers & coffee", "url": "https://www.livethecelebrationlife.com/events/celebration-farmers-market-sundays-at-town-center" },
+    { "day": "Sun", "name": "Guns N' Roses Tribute: Nightrain", "meta": "The Wharf at Sunset Walk · 5 PM", "url": "https://www.livethecelebrationlife.com/events/guns-n-roses-tribute-nightrain-at-the-wharf" }
+  ],
+  "blog": [
+    { "title": "Creative Workshops & Art Classes Near Celebration", "tease": "Where to get hands-on this summer — pottery, painting & more.", "url": "https://www.livethecelebrationlife.com/blog/creative-workshops-and-art-classes-near-celebration-fl-in-2026" },
+    { "title": "The Best Yoga & Pilates Studios Near Celebration", "tease": "Find your flow — the local studios neighbors swear by.", "url": "https://www.livethecelebrationlife.com/blog/the-best-yoga-and-pilates-studios-near-celebration-fl" },
+    { "title": "Inside Celebration's 4,700-Acre Nature Reserve", "tease": "Wildlife, trails, and exactly what to expect out there.", "url": "https://www.livethecelebrationlife.com/blog/exploring-celebration-fl-s-4-700-acre-nature-reserve-wildlife-trails-and-what-to-expect" }
+  ],
+  "storefront": {
+    "title": "A night out, the local way",
+    "body": "Skip the drive to the parks tonight, hunni — the Town Center's got you. We rounded up where the locals actually go after dark: the dinner tables worth lingering at, the craft beer pouring cold, and the spots to land when you want one more before home. Date night, friends' night, or just-because — it's all a stroll away.",
+    "url": "https://www.livethecelebrationlife.com/blog/here-s-what-locals-do-for-a-night-out-dining-craft-beer-and-entertainment-in-the-town-center",
+    "photo_url": "https://www.livethecelebrationlife.com/uploads/news-pictures/5-new-york-blog-post-image-20260616163933.webp",
+    "cta": "Read the roundup"
+  },
+  "bright_spot": {
+    "title": "Happy 30th, Celebration!",
+    "body": "Can you believe it — our little town turned 30 this month. From a Disney blueprint back in 1996 to the front-porch, lakefront community we know today, a whole lot has changed (and a lot of the good stuff hasn't). We looked back at how Celebration grew up — and what still makes it feel like home in 2026.",
+    "url": "https://www.livethecelebrationlife.com/blog/celebration-fl-turned-30-this-month-and-the-town-has-changed",
+    "photo_url": "https://www.livethecelebrationlife.com/uploads/news-pictures/pphoto-159.webp",
+    "cta": "Take the look back"
+  },
+  "guide": {
+    "label": "The Almanac",
+    "title": "Your 4th of July in Celebration",
+    "body": "The complete, no-stress guide to Independence Day around town — where to catch the fireworks, the parade route, family-friendly cookouts, and the spots that book up fast. Save it, share it, plan around it.",
+    "url": "https://www.livethecelebrationlife.com/guides/4th-of-july",
+    "cta": "Get the free guide"
+  },
+  "real_estate": {},
+  "deals": [
+    { "name": "Celebration Wellness Spa", "desc": "$11 Botox — all June long", "tag": "$11 BOTOX", "url": "https://www.livethecelebrationlife.com/coupons/11-botox-all-june-at-celebration-wellness-spa" },
+    { "name": "Club Pilates Celebration", "desc": "Your first reformer class is free", "tag": "FREE", "url": "https://www.livethecelebrationlife.com/coupons/free-pilates-intro-class-at-club-pilates-celebration" },
+    { "name": "Lumos Dental Studio", "desc": "$125 new-patient exam & cleaning", "tag": "$125", "url": "https://www.livethecelebrationlife.com/coupons/125-new-patient-special-at-lumos-dental-studio" }
+  ],
+  "alist": [
+    { "cat": "Marketing & AI · Winter Garden", "name": "Geckonaut Agency", "desc": "AI voice agents, websites & marketing for local businesses.", "url": "https://www.livethecelebrationlife.com/united-states/winter-garden/top-category/geckonaut-agency", "cta": "Visit the profile", "emoji": "🦎", "emoji_bg": "#E7F8F5" },
+    { "cat": "Chiropractic & Wellness · Kissimmee", "name": "Dishman Chiropractic & Wellness Center", "desc": "Chiropractic and wellness care for the whole family.", "url": "https://www.livethecelebrationlife.com/united-states/kissimmee/top-category/dishman-chiropractic-and-wellness-center-inc", "cta": "Visit the profile", "emoji": "🩺", "emoji_bg": "#FFF6D8" }
+  ],
+  "giveaway": {
+    "title": "Win a $100 Market Street gift card",
+    "body": "Spend it however you like — dinner for two, a fresh bouquet, a new pair of shades. Enter in ten seconds and I'll draw one lucky neighbor at the end of the month. Pop back each Thursday to boost your odds — it's on us, hunni.",
+    "url": "https://www.livethecelebrationlife.com/giveaway",
+    "cta": "Enter to win"
+  },
+  "did_you_know": {
+    "headline": "Celebration's downtown was designed to be fully walkable.",
+    "body": "From the lakefront to Market Street, almost everything's a stroll away — by design."
+  }
+}
