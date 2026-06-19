@@ -10,7 +10,7 @@ Usage:
 --lang  en | es | pt  (drives all the fixed UI text: labels, buttons, footer, etc.)
 --embed inline local /assets images as data URIs (preview only; production omits it).
 """
-import argparse, base64, html, json, os, re
+import argparse, base64, datetime, html, json, os, re
 
 def esc(s): return html.escape(str(s), quote=True)
 
@@ -123,7 +123,11 @@ def r_events(items):
     rows=[]
     for i,e in enumerate(items):
         b="" if i==len(items)-1 else "border-bottom:1px dashed #ECE3D4;"
-        rows.append(f'<tr><td style="padding:9px 0;{b}"><strong style="color:#0D3347;font-size:15px;">{esc(e.get("day",""))} &middot; {esc(e["name"])}</strong><br><span style="color:#5D7079;font-size:13px;">{esc(e.get("meta",""))}</span></td></tr>')
+        label=f'{esc(e.get("day",""))} &middot; {esc(e["name"])}'
+        head=(f'<a href="{esc(e["url"])}" style="color:#0D3347;font-size:15px;font-weight:700;text-decoration:none;">{label}</a>'
+              if e.get("url") else
+              f'<strong style="color:#0D3347;font-size:15px;">{label}</strong>')
+        rows.append(f'<tr><td style="padding:9px 0;{b}">{head}<br><span style="color:#5D7079;font-size:13px;">{esc(e.get("meta",""))}</span></td></tr>')
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:{BODY};">'+''.join(rows)+'</table>'
 
 def r_blog(items):
@@ -136,7 +140,9 @@ def r_blog(items):
 def r_deals(items):
     rows=[]
     for i,d in enumerate(items):
-        rows.append(f'<tr><td bgcolor="#FFFFFF" style="background:#FFFFFF;border-radius:10px;padding:11px 13px;"><table role="presentation" width="100%"><tr><td><strong style="color:#0D3347;font-size:14px;">{esc(d["name"])}</strong><br><span style="color:#5D7079;font-size:12px;">{esc(d.get("desc",""))}</span></td><td align="right" valign="middle"><span style="background:#F58220;color:#FFFFFF;font-weight:700;font-size:12px;padding:5px 10px;border-radius:8px;">{esc(d.get("tag",""))}</span></td></tr></table></td></tr>')
+        inner=f'<table role="presentation" width="100%"><tr><td><strong style="color:#0D3347;font-size:14px;">{esc(d["name"])}</strong><br><span style="color:#5D7079;font-size:12px;">{esc(d.get("desc",""))}</span></td><td align="right" valign="middle"><span style="background:#F58220;color:#FFFFFF;font-weight:700;font-size:12px;padding:5px 10px;border-radius:8px;">{esc(d.get("tag",""))}</span></td></tr></table>'
+        if d.get("url"): inner=f'<a href="{esc(d["url"])}" style="display:block;text-decoration:none;color:inherit;">{inner}</a>'
+        rows.append(f'<tr><td bgcolor="#FFFFFF" style="background:#FFFFFF;border-radius:10px;padding:11px 13px;">{inner}</td></tr>')
         if i!=len(items)-1: rows.append('<tr><td height="8" style="font-size:0;line-height:0;">&nbsp;</td></tr>')
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:{BODY};">'+''.join(rows)+'</table>'
 
@@ -144,7 +150,10 @@ def r_alist(items):
     rows=[]
     for i,a in enumerate(items):
         bg=a.get("emoji_bg","#E7F8F5")
-        rows.append(f'<tr><td bgcolor="#FFFBF3" style="background:#FFFBF3;border:1px solid #ECE3D4;border-radius:14px;padding:14px;"><table role="presentation" width="100%"><tr><td width="56" valign="middle"><table role="presentation" width="48" cellpadding="0" cellspacing="0"><tr><td height="48" align="center" valign="middle" bgcolor="{bg}" style="background:{bg};border-radius:12px;font-size:20px;">{a.get("emoji","&#10024;")}</td></tr></table></td><td valign="middle" style="padding-left:12px;"><span style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#15C4AF;">{esc(a.get("cat",""))}</span><br><strong style="color:#0D3347;font-size:15px;">{esc(a["name"])}</strong><br><span style="color:#5D7079;font-size:13px;">{esc(a.get("desc",""))}</span> <a href="{esc(a.get("url","#"))}" style="color:#15C4AF;font-size:13px;font-weight:700;">{esc(a.get("cta","Learn more"))} &rarr;</a></td></tr></table></td></tr>')
+        cta=f'<span style="color:#15C4AF;font-size:13px;font-weight:700;white-space:nowrap;">{esc(a.get("cta","Learn more"))} &rarr;</span>'
+        inner=f'<table role="presentation" width="100%"><tr><td width="56" valign="middle"><table role="presentation" width="48" cellpadding="0" cellspacing="0"><tr><td height="48" align="center" valign="middle" bgcolor="{bg}" style="background:{bg};border-radius:12px;font-size:20px;">{a.get("emoji","&#10024;")}</td></tr></table></td><td valign="middle" style="padding-left:12px;"><span style="font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#15C4AF;">{esc(a.get("cat",""))}</span><br><strong style="color:#0D3347;font-size:15px;">{esc(a["name"])}</strong><br><span style="color:#5D7079;font-size:13px;">{esc(a.get("desc",""))}</span> {cta}</td></tr></table>'
+        if a.get("url"): inner=f'<a href="{esc(a["url"])}" style="display:block;text-decoration:none;color:inherit;">{inner}</a>'
+        rows.append(f'<tr><td bgcolor="#FFFBF3" style="background:#FFFBF3;border:1px solid #ECE3D4;border-radius:14px;padding:14px;">{inner}</td></tr>')
         if i!=len(items)-1: rows.append('<tr><td height="10" style="font-size:0;line-height:0;">&nbsp;</td></tr>')
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:{BODY};">'+''.join(rows)+'</table>'
 
@@ -166,18 +175,31 @@ def r_guide(g):
     return (f'<div style="font-family:{DISPLAY};font-size:23px;font-weight:700;color:#0D3347;padding:2px 0 10px;">{esc(g["title"])}</div>'
             f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFF6D8" style="background:#FFF6D8;border:1px solid #F3E3A8;border-radius:16px;"><tr><td style="padding:20px;font-family:{BODY};"><div style="font-size:15px;line-height:1.55;color:#1d2b34;padding-bottom:12px;">{esc(g.get("body",""))}</div><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#F58220" style="border-radius:999px;"><a href="{esc(g.get("url","#"))}" style="display:inline-block;padding:12px 26px;font-family:{BODY};font-size:14px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:999px;">{esc(g.get("cta","Get the free guide"))} &rarr;</a></td></tr></table></td></tr></table>')
 
-def r_realestate(re_, S):
+def r_realestate(re_content, S, re_cfg):
+    fixed=(re_cfg or {}).get("fixed",{})
+    rot=(re_cfg or {}).get("search_of_week_rotation",[])
+    open_url = fixed.get("open_houses_url") or re_content.get("open_url") or "#"
+    new_url  = fixed.get("new_on_market_url") or re_content.get("new_url") or "#"
+    val_url  = fixed.get("valuation_url") or re_content.get("valuation_url") or "#"
+    # Search of the Week: skill override wins, else rotate by ISO week from config
+    if re_content.get("search_url"):
+        s_url=re_content["search_url"]; s_label=re_content.get("search_label") or ""
+    elif rot:
+        pick=rot[datetime.date.today().isocalendar()[1] % len(rot)]
+        s_url=pick.get("url","#"); s_label=re_content.get("search_label") or pick.get("label","")
+    else:
+        s_url=re_content.get("search_url","#"); s_label=re_content.get("search_label","")
     def tile(url,ic,title,sub):
         return (f'<a href="{esc(url)}" style="display:block;text-decoration:none;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFBF3" style="background:#FFFBF3;border:1px solid #ECE3D4;border-radius:12px;"><tr>'
                 f'<td align="center" style="padding:14px;font-family:{BODY};"><div style="font-size:20px;">{ic}</div>'
                 f'<div style="font-size:13px;font-weight:700;color:#0D3347;padding-top:4px;line-height:1.2;">{title}</div>'
                 f'<div style="font-size:11.5px;color:#5D7079;">{sub}</div></td></tr></table></a>')
     return ('<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>'
-            f'<td class="stack" width="50%" valign="top" style="padding:0 5px 10px 0;">{tile(re_.get("open_url","#"),"&#127968;",S["S_RE_OPEN_T"],S["S_RE_OPEN_S"])}</td>'
-            f'<td class="stack" width="50%" valign="top" style="padding:0 0 10px 5px;">{tile(re_.get("new_url","#"),"&#10024;",S["S_RE_NEW_T"],S["S_RE_NEW_S"])}</td>'
+            f'<td class="stack" width="50%" valign="top" style="padding:0 5px 10px 0;">{tile(open_url,"&#127968;",S["S_RE_OPEN_T"],S["S_RE_OPEN_S"])}</td>'
+            f'<td class="stack" width="50%" valign="top" style="padding:0 0 10px 5px;">{tile(new_url,"&#10024;",S["S_RE_NEW_T"],S["S_RE_NEW_S"])}</td>'
             '</tr><tr>'
-            f'<td class="stack" width="50%" valign="top" style="padding:0 5px 0 0;">{tile(re_.get("search_url","#"),"&#127946;",S["S_RE_SEARCH_T"],esc(re_.get("search_label","")))}</td>'
-            f'<td class="stack" width="50%" valign="top" style="padding:0 0 0 5px;">{tile(re_.get("valuation_url","#"),"&#128176;",S["S_RE_WORTH_T"],S["S_RE_WORTH_S"])}</td>'
+            f'<td class="stack" width="50%" valign="top" style="padding:0 5px 10px 0;">{tile(s_url,"&#127946;",S["S_RE_SEARCH_T"],esc(s_label))}</td>'
+            f'<td class="stack" width="50%" valign="top" style="padding:0 0 10px 5px;">{tile(val_url,"&#128176;",S["S_RE_WORTH_T"],S["S_RE_WORTH_S"])}</td>'
             '</tr></table>')
 
 def r_giveaway(g):
@@ -206,6 +228,11 @@ def main():
     t=open(a.template,encoding="utf-8").read()
     S=STRINGS.get(a.lang,STRINGS["en"])
     here=os.path.dirname(os.path.dirname(os.path.abspath(a.settings)))
+    re_cfg={}
+    re_cfg_path=os.path.join(os.path.dirname(os.path.abspath(a.settings)),"real-estate.json")
+    if os.path.exists(re_cfg_path):
+        try: re_cfg=json.load(open(re_cfg_path,encoding="utf-8"))
+        except Exception: re_cfg={}
 
     t=fill(t,"PREHEADER",esc(c.get("preheader","")))
     t=fill(t,"ISSUELINE",esc(c.get("issue_line","")))
@@ -216,7 +243,7 @@ def main():
     t=fill(t,"STOREFRONT",r_feature(c["storefront"],c["storefront"].get("cta","Read their story")))
     t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
     t=fill(t,"GUIDE",r_guide(c["guide"]))
-    t=fill(t,"REALESTATE",r_realestate(c["real_estate"],S))
+    t=fill(t,"REALESTATE",r_realestate(c.get("real_estate",{}),S,re_cfg))
     t=fill(t,"DEALS",r_deals(c.get("deals",[])))
     t=fill(t,"GIVEAWAY",r_giveaway(c["giveaway"]))
     t=fill(t,"DIDYOUKNOW",r_dyk(c["did_you_know"]))
