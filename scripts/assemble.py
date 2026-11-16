@@ -40,6 +40,7 @@ STRINGS = {
  "S_INV1_T":"Got something going on?","S_INV1_D":"Hosting an event or running a deal? Drop the link — Sunni does the rest.",
  "S_INV2_T":"Nominate a neighbor","S_INV2_D":"Know a great local, business, or cause? Tell us who and why.",
  "S_INV3_T":"Is your business on the map?","S_INV3_D":"Get found by neighbors searching for what you do. List free in minutes.",
+ "S_EY_APP":"New &middot; The app is here","S_APPF_H":"The whole town, right in your pocket","S_APPF_D":"Events, sweet deals, local favorites and me, Sunni, all in one tap. Download the free Celebration Life app and never miss what's happening around town.",
  "S_ASK_BADGE":"Ask Sunni","S_ASK_T":"Ask Sunni — by voice, call or text",
  "S_ASK_D":"Your Celebration concierge, hunni. Talk to me, text me, or tap to chat on your phone or in the app — ask what's happening this weekend, the nearest open chiropractor, or a few painters with good reviews. Want the latest right now? Call me directly. I speak many languages, so ask in whichever feels like home.",
  "S_ASK_CALL":"Call Sunni: 321-844-7724",
@@ -72,6 +73,7 @@ STRINGS = {
  "S_INV1_T":"¿Tienes algo en marcha?","S_INV1_D":"¿Organizas un evento o tienes una promo? Comparte el enlace — Sunni hace el resto.",
  "S_INV2_T":"Nomina a un vecino","S_INV2_D":"¿Conoces a un buen vecino, negocio o causa? Cuéntanos quién y por qué.",
  "S_INV3_T":"¿Tu negocio está en el mapa?","S_INV3_D":"Que los vecinos te encuentren cuando buscan lo que ofreces. Regístrate gratis en minutos.",
+ "S_EY_APP":"Nuevo &middot; Ya llegó la app","S_APPF_H":"Todo el pueblo, en tu bolsillo","S_APPF_D":"Eventos, ofertas, favoritos locales y yo, Sunni, todo en un toque. Descarga gratis la app de The Celebration Life y no te pierdas nada de lo que pasa en el pueblo.",
  "S_ASK_BADGE":"Pregúntale a Sunni","S_ASK_T":"Pregúntale a Sunni — por voz, llamada o texto",
  "S_ASK_D":"Tu concierge de Celebration, hunni. Háblame, escríbeme o toca para chatear desde tu teléfono o la app — pregúntame qué hacer este fin de semana, el quiropráctico abierto más cercano o unos pintores bien recomendados. ¿Quieres lo último ahora mismo? Llámame directamente. Hablo muchos idiomas, así que pregunta en el que te haga sentir en casa.",
  "S_ASK_CALL":"Llama a Sunni: 321-844-7724",
@@ -104,6 +106,7 @@ STRINGS = {
  "S_INV1_T":"Tem algo rolando?","S_INV1_D":"Vai organizar um evento ou tem uma promo? Mande o link — a Sunni cuida do resto.",
  "S_INV2_T":"Indique um vizinho","S_INV2_D":"Conhece um bom vizinho, negócio ou causa? Conte pra gente quem e por quê.",
  "S_INV3_T":"Seu negócio está no mapa?","S_INV3_D":"Seja encontrado pelos vizinhos que procuram o que você faz. Cadastre-se grátis em minutos.",
+ "S_EY_APP":"Novo &middot; O app chegou","S_APPF_H":"A cidade inteira, no seu bolso","S_APPF_D":"Eventos, ofertas, favoritos locais e eu, a Sunni, tudo em um toque. Baixe grátis o app do The Celebration Life e não perca nada do que acontece na cidade.",
  "S_ASK_BADGE":"Pergunte à Sunni","S_ASK_T":"Pergunte à Sunni — por voz, ligação ou texto",
  "S_ASK_D":"Sua concierge de Celebration, hunni. Fale comigo, mande uma mensagem ou toque para conversar no celular ou no app — pergunte o que rola neste fim de semana, o quiroprático aberto mais perto ou uns pintores bem avaliados. Quer as novidades agora? Ligue direto para mim. Eu falo vários idiomas, então pergunte no que faz você se sentir em casa.",
  "S_ASK_CALL":"Ligue para a Sunni: 321-844-7724",
@@ -211,9 +214,8 @@ def r_giveaway(g):
             f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#FFFFFF" style="border-radius:999px;"><a href="{esc(g.get("url","#"))}" style="display:inline-block;padding:13px 30px;font-family:{BODY};font-size:15px;font-weight:700;color:#F58220;text-decoration:none;border-radius:999px;">{esc(g.get("cta","Enter to win"))} &rarr;</a></td></tr></table>')
 
 def r_appfeature(f):
-    return (f'<div style="font-family:{DISPLAY};font-size:22px;font-weight:700;color:#FFFFFF;padding:6px 0 6px;">{esc(f["title"])}</div>'
-            f'<div style="font-size:14px;color:#CFE2EE;padding-bottom:14px;">{esc(f.get("body",""))}</div>'
-            f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#15C4AF" style="border-radius:999px;"><a href="{{{{APP_URL}}}}" style="display:inline-block;padding:11px 24px;font-family:{BODY};font-size:14px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:999px;">{esc(f.get("cta","Get the app"))} &rarr;</a></td></tr></table>')
+    return (f'<div style="font-family:{DISPLAY};font-size:20px;font-weight:700;color:#0D3347;padding-bottom:6px;">{esc(f["title"])}</div>'
+            f'<div style="font-size:15px;line-height:1.55;color:#1d2b34;padding-bottom:16px;">{esc(f.get("body",""))}</div>')
 
 def drop_section(h,name):
     return re.sub(r'  <!--SECTION:'+name+r'-->.*?<!--/SECTION:'+name+r'-->\n','',h,count=1,flags=re.S)
@@ -257,7 +259,6 @@ def main():
     if (c.get("bright_spot") or {}).get("title"): t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
     af=c.get("app_feature") or {}
     if af.get("title"): t=fill(t,"APPFEATURE",r_appfeature(af))
-    else: t=drop_section(t,"APPFEATURE")
     t=fill(t,"GUIDE",r_guide(c["guide"]))
     t=fill(t,"DEALS",r_deals(c.get("deals",[])))
     if (c.get("giveaway") or {}).get("title"): t=fill(t,"GIVEAWAY",r_giveaway(c["giveaway"]))
@@ -269,12 +270,18 @@ def main():
     for k,v in S.items(): t=t.replace("{{"+k+"}}", v)
 
     A=s["assets"]; base=A["base_url"].rstrip("/")
-    img=lambda fn:(data_uri(os.path.join(here,"assets",fn)) if a.embed else f"{base}/{fn}")
+    img=lambda fn:(data_uri(os.path.join(here,"assets",fn)) if (a.embed and os.path.exists(os.path.join(here,"assets",fn))) else f"{base}/{fn}")
     t=t.replace("{{LOGO_COLOR_URL}}",img(A["logo_color"])).replace("{{LOGO_WHITE_URL}}",img(A["logo_white"]))
     t=t.replace("{{SUNNI_HEAD_URL}}",img(A["sunni_head"])).replace("{{SUNNI_FULL_URL}}",img(A.get("sunni_full",A["sunni_head"])))
+    t=t.replace("{{SUNNI_APP_URL}}",img(A.get("sunni_app","sunni-ask.png"))).replace("{{BADGE_APPSTORE_URL}}",img(A.get("badge_appstore","badge-appstore.png"))).replace("{{BADGE_GOOGLEPLAY_URL}}",img(A.get("badge_googleplay","badge-googleplay.png")))
+    # until the official store badge PNGs are in assets/, show plain text buttons instead of broken images
+    for key,fn in [("BADGE_APPSTORE_URL",A.get("badge_appstore","badge-appstore.png")),("BADGE_GOOGLEPLAY_URL",A.get("badge_googleplay","badge-googleplay.png"))]:
+        if not os.path.exists(os.path.join(here,"assets",fn)):
+            t=re.sub(r'<img src="[^"]*'+re.escape(fn)+r'"[^>]*alt="([^"]*)"[^>]*>', r'<span style="display:inline-block;background:#0D3347;color:#FFFFFF;font-family:Arial,sans-serif;font-size:13px;font-weight:700;padding:13px 18px;border-radius:8px;">\1</span>', t)
     links=dict(s.get("links",{})); links.update(c.get("links",{}))
     links.setdefault("facebook_page", links.get("facebook","#"))  # brand page falls back to group if unset
-    for tok,key in [("EVENTS_ALL_URL","events_all"),("BLOG_ALL_URL","blog_all"),("DEALS_ALL_URL","deals_all"),
+    links.setdefault("app_ios",links.get("app","#")); links.setdefault("app_android",links.get("app","#"))
+    for tok,key in [("APP_IOS_URL","app_ios"),("APP_ANDROID_URL","app_android"),("EVENTS_ALL_URL","events_all"),("BLOG_ALL_URL","blog_all"),("DEALS_ALL_URL","deals_all"),
                     ("ASK_SUNNI_URL","ask_sunni"),("FACEBOOK_URL","facebook"),("FACEBOOK_PAGE_URL","facebook_page"),
                     ("INSTAGRAM_URL","instagram"),("APP_URL","app"),("SUBMIT_URL","submit"),
                     ("NOMINATE_URL","nominate"),("LISTBIZ_URL","list_business")]:

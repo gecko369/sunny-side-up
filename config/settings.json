@@ -9,7 +9,10 @@
     "logo_color": "logo-color.png",
     "logo_white": "logo-white.png",
     "sunni_head": "sunni-headshot.png",
-    "sunni_full": "sunni-ask.png"
+    "sunni_full": "sunni-wave.png",
+    "sunni_app": "sunni-ask.png",
+    "badge_appstore": "badge-appstore.png",
+    "badge_googleplay": "badge-googleplay.png"
   },
   "mailchimp": {
     "audience_id": "256260bd26",
@@ -48,10 +51,11 @@
     "app": "https://www.livethecelebrationlife.com/app",
     "submit": "https://www.livethecelebrationlife.com/submit",
     "nominate": "https://www.livethecelebrationlife.com/nominate",
-    "list_business": "https://www.livethecelebrationlife.com/join"
+    "list_business": "https://www.livethecelebrationlife.com/join",
+    "app_ios": "https://www.livethecelebrationlife.com/app",
+    "app_android": "https://www.livethecelebrationlife.com/app"
   },
   "app": {
-    "live": false,
-    "_comment": "set true when the app is live (adds the weekly App of the Week block)"
+    "_comment": "Set links.app_ios and links.app_android to the real store URLs when the app is live."
   }
 }
