@@ -56,7 +56,7 @@ python3 scripts/assemble.py --content content/issue-en.json --lang en --settings
 ```
 
 ## Step 8 — Translate to Spanish and Portuguese
-All fixed UI text — section labels, eyebrows, buttons, the real-estate tiles, sign-off, and footer — is translated **automatically** by the `--lang` flag (see `STRINGS` in `assemble.py`). So you only translate the **content values** in the JSON.
+All fixed UI text — section labels, eyebrows, buttons, sign-off, and footer — is translated **automatically** by the `--lang` flag (see `STRINGS` in `assemble.py`). So you only translate the **content values** in the JSON.
 
 Copy `issue-en.json` to `issue-es.json` and `issue-pt.json`. In each copy, translate every human-readable **value** into natural, warm **Latin-American Spanish** (es) / **Brazilian Portuguese** (pt), keeping Sunni's personality. Translate these fields specifically:
 - `preheader`, `issue_line`, `forecast`
@@ -65,27 +65,37 @@ Copy `issue-en.json` to `issue-es.json` and `issue-pt.json`. In each copy, trans
 - `blog[]`: `title`, `tease`
 - `storefront` / `bright_spot`: `title`, `body`, `cta` (leave `photo_url` and `url` as-is)
 - `guide`: `title`, `body`, `cta` (leave `label` in English — it's mapped automatically)
-- `real_estate`: `search_label` only
+- `app_feature` (if present): `title`, `body`, `cta`
 - `deals[]`: `name` (if it's descriptive), `desc`; keep brand names and the short `tag` as-is
 - `alist[]`: `cat`, `desc`, `cta` (keep business `name` as-is)
 - `giveaway`: `title`, `body`, `cta`
 - `did_you_know`: `headline`, `body`
 
-Do **not** translate URLs, emoji, tags, or proper names of businesses/people. Keep "Sunny Side Up", "Sunni", "The Celebration Life", and "eXp Realty" in English. Then build each with its language flag:
+Do **not** translate URLs, emoji, tags, or proper names of businesses/people. Keep "Sunny Side Up", "Sunni", "The Celebration Life" in English. Then build each with its language flag:
 ```
 python3 scripts/assemble.py --content content/issue-es.json --lang es --settings config/settings.json --template templates/email-template.html --out build/issue-es.html
 python3 scripts/assemble.py --content content/issue-pt.json --lang pt --settings config/settings.json --template templates/email-template.html --out build/issue-pt.html
 ```
 After building, confirm each prints `0 leftover tokens`.
 
-## Step 9 — Create the 3 Mailchimp drafts (do NOT send)
-For each language, run:
-```
-python3 scripts/push_to_mailchimp.py --html build/issue-en.html --lang en --settings config/settings.json
-python3 scripts/push_to_mailchimp.py --html build/issue-es.html --lang es --settings config/settings.json
-python3 scripts/push_to_mailchimp.py --html build/issue-pt.html --lang pt --settings config/settings.json
-```
-Each targets the matching language tag automatically. Capture the campaign web_id links from the output.
+## Step 9 — Create the 3 Mailchimp drafts via the Zapier connector (do NOT send)
+Mailchimp is reached through the **Zapier connector** (app "Mailchimp", connection "The Celebration Life"). No API key and no direct network access are needed. Do **not** use `push_to_mailchimp.py` in the cloud routine (it is kept only for local runs), and do not use the Intuit Mailchimp connector.
+
+1. **Publish the built HTML** so Mailchimp can import it. Copy the three builds to `issues/<ISSUE_DATE>/en.html`, `es.html`, `pt.html`, commit, and push to `main`. They are then served by GitHub Pages at
+   `https://gecko369.github.io/sunny-side-up/issues/<ISSUE_DATE>/<lang>.html` (Pages takes 1-3 minutes to deploy after the push).
+2. **Create each draft** with Zapier `execute_zapier_write_action`, selected_api `MailchimpCLIAPI`, action `campaignCreate` (tool_name `mailchimp_create_campaign`), params:
+   - `list_id`: `256260bd26`
+   - `tag_ids`: `[135]` for English (`tcl_english_newsletter`), `[134]` for Spanish (`tcl_espanol_newsletter`), `[136]` for Portuguese (`tcl_portugues_newsletter`). If a call rejects an ID, re-resolve it with `inspect_zapier_actions` (tool_name `mailchimp_create_campaign`, enum_property `tag_ids`, params `{"list_id":"256260bd26"}`).
+   - `title`: `Sunny Side Up (EN) - <ISSUE_DATE>` (ES / PT likewise)
+   - `subject_line`: from `settings.json` → `mailchimp.subject.<lang>`
+   - `preview_text`: that language's `preheader`
+   - `from_name`: `settings.json` → `mailchimp.from_name`; `reply_to`: `mailchimp.from_email`
+   - `content_type`: `html` (leave `html` empty; content is set in the next step)
+   Keep the returned campaign `id` and `web_id`.
+3. **Set the content** with Zapier action `_zap_raw_request` (tool_name `mailchimp_make_api_mutating_request`), params: `method` `PUT`, `fail_on_errors` `true`, `url` `https://us19.api.mailchimp.com/3.0/campaigns/<id>/content`, `headers` `{"Content-Type":"application/json"}`, `body` `{"url":"https://gecko369.github.io/sunny-side-up/issues/<ISSUE_DATE>/<lang>.html"}`.
+   - "Could not get any content from the provided URL" means Pages has not deployed yet: wait a minute and retry (up to 6 times). The `raw.githubusercontent.com` URL does **not** work.
+   - A success returns the full HTML; confirm it contains this issue's Top Billing title.
+4. **Never** call `send_campaign`. Drafts only. The draft link is `https://us19.admin.mailchimp.com/campaigns/edit?id=<web_id>`.
 
 ## Step 10 — Notify Brad
 Using the Gmail connector, email Brad a short summary: "3 Sunny Side Up drafts are ready for [ISSUE_DATE] — EN/ES/PT." List what's in this issue (Top Billing, Storefront, Bright Spot, guide, # of events/deals) and paste the 3 Mailchimp draft links. Remind him nothing has been sent.
