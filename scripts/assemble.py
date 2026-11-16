@@ -207,6 +207,14 @@ def r_giveaway(g):
             f'<div style="font-size:15px;color:#FFFFFF;padding-bottom:16px;">{esc(g.get("body",""))}</div>'
             f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td bgcolor="#FFFFFF" style="border-radius:999px;"><a href="{esc(g.get("url","#"))}" style="display:inline-block;padding:13px 30px;font-family:{BODY};font-size:15px;font-weight:700;color:#F58220;text-decoration:none;border-radius:999px;">{esc(g.get("cta","Enter to win"))} &rarr;</a></td></tr></table>')
 
+def r_appfeature(f):
+    return (f'<div style="font-family:{DISPLAY};font-size:22px;font-weight:700;color:#FFFFFF;padding:6px 0 6px;">{esc(f["title"])}</div>'
+            f'<div style="font-size:14px;color:#CFE2EE;padding-bottom:14px;">{esc(f.get("body",""))}</div>'
+            f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#15C4AF" style="border-radius:999px;"><a href="{{{{APP_URL}}}}" style="display:inline-block;padding:11px 24px;font-family:{BODY};font-size:14px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:999px;">{esc(f.get("cta","Get the app"))} &rarr;</a></td></tr></table>')
+
+def drop_section(h,name):
+    return re.sub(r'  <!--SECTION:'+name+r'-->.*?<!--/SECTION:'+name+r'-->\n','',h,count=1,flags=re.S)
+
 def r_dyk(d):
     return (f'<div style="font-size:16px;font-weight:700;color:#0D3347;padding:6px 0 4px;">{esc(d["headline"])}</div>'
             f'<div style="font-size:13px;color:#5D7079;">{esc(d.get("body",""))}</div>')
@@ -214,13 +222,6 @@ def r_dyk(d):
 # ---------- main ----------
 def fill(h,name,inner):
     return re.sub(r'(<!--FILL:'+name+r'-->).*?(<!--/FILL-->)', lambda m:m.group(1)+inner+m.group(2), h, count=1, flags=re.S)
-
-def drop_section(h, marker):
-    """Remove a whole <tr> section that starts at '<!-- marker -->' and runs to the next HTML comment marker."""
-    return re.sub(r'[ \t]*<!-- '+re.escape(marker)+r' -->.*?(?=[ \t]*<!-- )', '', h, count=1, flags=re.S)
-
-def _empty(x, key="title"):
-    return (not x) or not str(x.get(key,"")).strip()
 
 def data_uri(p):
     with open(p,"rb") as f: return "data:image/png;base64,"+base64.b64encode(f.read()).decode()
@@ -247,14 +248,16 @@ def main():
     t=fill(t,"TOPBILLING",r_topbilling(c["top_billing"]))
     t=fill(t,"EVENTS",r_events(c.get("events",[])))
     t=fill(t,"BLOG",r_blog(c.get("blog",[])))
-    t=fill(t,"STOREFRONT",r_feature(c["storefront"],c["storefront"].get("cta","Read their story")))
-    if _empty(c.get("bright_spot")): t=drop_section(t,"THE BRIGHT SPOT")
-    else: t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
+    for key,ck in [("STOREFRONT","storefront"),("BRIGHTSPOT","bright_spot"),("GIVEAWAY","giveaway")]:
+        if not (c.get(ck) or {}).get("title"): t=drop_section(t,key)
+    if (c.get("storefront") or {}).get("title"): t=fill(t,"STOREFRONT",r_feature(c["storefront"],c["storefront"].get("cta","Read their story")))
+    if (c.get("bright_spot") or {}).get("title"): t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
+    af=c.get("app_feature") or {}
+    if af.get("title"): t=fill(t,"APPFEATURE",r_appfeature(af))
+    else: t=drop_section(t,"APPFEATURE")
     t=fill(t,"GUIDE",r_guide(c["guide"]))
-    t=fill(t,"REALESTATE",r_realestate(c.get("real_estate",{}),S,re_cfg))
     t=fill(t,"DEALS",r_deals(c.get("deals",[])))
-    if _empty(c.get("giveaway")) : t=drop_section(t,"OUR TREAT")
-    else: t=fill(t,"GIVEAWAY",r_giveaway(c["giveaway"]))
+    if (c.get("giveaway") or {}).get("title"): t=fill(t,"GIVEAWAY",r_giveaway(c["giveaway"]))
     t=fill(t,"DIDYOUKNOW",r_dyk(c["did_you_know"]))
     t=fill(t,"ALIST",r_alist(c.get("alist",[])))
 
@@ -274,6 +277,7 @@ def main():
                     ("NOMINATE_URL","nominate"),("LISTBIZ_URL","list_business")]:
         t=t.replace("{{"+tok+"}}",esc(links.get(key,"#")))
 
+    t=re.sub(r"  <!--/?SECTION:[A-Z]+-->\n","",t)
     os.makedirs(os.path.dirname(a.out),exist_ok=True)
     open(a.out,"w",encoding="utf-8").write(t)
     print(f"Wrote {a.out} [{a.lang}] ({len(t)} bytes, {t.count('{{')} leftover tokens)")

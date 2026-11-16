@@ -49,5 +49,9 @@
     "submit": "https://www.livethecelebrationlife.com/submit",
     "nominate": "https://www.livethecelebrationlife.com/nominate",
     "list_business": "https://www.livethecelebrationlife.com/join"
+  },
+  "app": {
+    "live": false,
+    "_comment": "set true when the app is live (adds the weekly App of the Week block)"
   }
 }

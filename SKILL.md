@@ -17,9 +17,14 @@ Work from the root of this repository. Files you will use:
 ## Step 0 — Figure out the target date
 The newsletter sends **Thursday**. Determine the date of the **upcoming Thursday** (today or the next one). Call it `ISSUE_DATE` (YYYY-MM-DD). Compute the **week number** of the year for rotation, and the **month number** for the guide.
 
-## Step 1 — Read this week's editorial picks (Google Sheet)
-Using the Google Drive / Sheets connector, open the sheet with ID from `settings.json` → `google_sheet.id`. Find the row whose **Issue Date** matches `ISSUE_DATE`. Read: Top Billing, Storefront (name + link), Bright Spot (name + link), Giveaway (prize + link), A-List Members, Notes.
-- If the row is blank or missing, use sensible picks from the BD content you pull in Step 2 and note it in the summary email.
+## Step 1 — Read (and self-create) this week's row in the Google Sheet
+Using the Google Sheets connector, open the sheet with ID from `settings.json` → `google_sheet.id`. Find the row whose **Issue Date** matches `ISSUE_DATE`.
+- **If the row does not exist, append it** (Issue Date = `ISSUE_DATE`) and fill **Top Billing** and **Notes** yourself (Notes: "auto-picked by Sunni routine"). Brad is NOT required to touch the sheet any week.
+- Read: Top Billing, Storefront (name + link), Bright Spot (name + link), Giveaway (prize + link), A-List Members, Guide of the Week, Did You Know, Notes. **Anything Brad typed overrides auto-picks.**
+- **Top Billing blank** → auto-pick the best weekend event from Step 2 (free, family-friendly, most local-feeling) and write it into the sheet cell.
+- **Storefront, Bright Spot, Giveaway blank** → those sections are **optional**: leave the key as `{}` in the content JSON and `assemble.py` drops the section completely. Never invent a business, resident story, or prize.
+- Bright Spot is for good news about a resident, family, or nonprofit (fed by the nominate form). It is not a generic town story.
+- **App of the Week**: if `settings.json` → `app.live` is `true`, write `app_feature` (`title`, `body`, `cta`) each week, a fresh angle on one app feature (events, deals, Ask Sunni). Otherwise leave `app_feature` as `{}`.
 
 ## Step 2 — Pull dynamic content from the Brilliant Directories site
 Using the Brilliant Directories connector (website_id in `settings.json` → `bd.website_id`). **Every item that has a post on the site must include its `url`** (the full `https://…` link to that post) — events, deals, and the Locally Loved businesses all link to their post when `url` is set, and show as plain text when it's missing. Don't leave them blank.
@@ -31,19 +36,19 @@ Using the Brilliant Directories connector (website_id in `settings.json` → `bd
 - **Storefront** (business spotlight) and **Bright Spot** (resident/nonprofit): write `title`, `body`, `cta`, `url`, **and `photo_url`**. The image **must come from the post itself**, taken as a full `https://…` URL in this order: (1) the post's featured-image field (e.g. `featured_image` / `image` / `photo` / `thumbnail` / `main_image` / `post_image`); (2) if none, the `src` of the first `<img>` in the post body HTML; (3) if none, fetch the post URL and read its `og:image` meta tag. Convert any relative path to an absolute `https://` URL using the site domain. **Never substitute a stock photo (Pexels, Unsplash, or any placeholder) or any image that does not belong to that post.** If the post has no image of its own, set `photo_url` to `""`.
 Keep it factual — only use what's really on the site.
 
-## Step 3 — Real estate
-The four real-estate tile **links are pulled automatically from `config/real-estate.json` by `assemble.py`** — you do **not** write them into the content JSON, and you must **never** output `REPLACE_ME` or `#`. `open_houses_url`, `new_on_market_url`, and `valuation_url` come straight from that file; **Search of the Week** rotates weekly from `search_of_week_rotation` on its own. You may optionally set `real_estate.search_label` (and `real_estate.search_url`) in the content JSON to override that week's pick — otherwise leave `real_estate` as `{}`.
+## Step 3 — (removed) Real estate
+The real-estate section has been removed from the newsletter. Do not write `real_estate` content; leave it out or `{}`.
 
 ## Step 4 — Guide + Did You Know
 From `config/content-calendar.json`:
-- **Guide** = `guides[month]` if present, else `guides.default`.
+- **Guide (required every issue)** = the sheet's "Guide of the Week" if set, else `guides[month]`, else `guides.default` (The Bright Pages newcomer guide). An issue must never ship without a guide.
 - **Did You Know** = `did_you_know[ week_number % len ]`.
 
 ## Step 5 — Weekend weather
 Web-search the Celebration, FL weekend forecast (Thu–Sun). Write **one warm line in Sunni's voice** for the Forecast opener. If unavailable, write a generic sunny line — never block on this.
 
 ## Step 6 — Write the English content JSON
-Create `content/issue-en.json` matching the schema in `content/sample-content-en.json` (same keys). Write everything in **Sunni's voice**: warm, sunny, front-porch Southern hospitality, an occasional "hunni"/"sugar", family-friendly, never cloying. Fill `forecast`, `top_billing`, `events`, `blog`, `storefront`, `bright_spot`, `guide`, `real_estate`, `deals`, `alist`, `giveaway`, `did_you_know`, `preheader`, `issue_line`. Use the links from the sheet/BD where available.
+Create `content/issue-en.json` matching the schema in `content/sample-content-en.json` (same keys). Write everything in **Sunni's voice**: warm, sunny, front-porch Southern hospitality, an occasional "hunni"/"sugar", family-friendly, never cloying. Fill `forecast`, `top_billing`, `events`, `blog`, `storefront`, `bright_spot`, `guide`, `app_feature`, `deals`, `alist`, `giveaway`, `did_you_know`, `preheader`, `issue_line`. Use the links from the sheet/BD where available.
 
 ## Step 7 — Build the English issue
 ```
