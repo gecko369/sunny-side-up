@@ -215,6 +215,13 @@ def r_dyk(d):
 def fill(h,name,inner):
     return re.sub(r'(<!--FILL:'+name+r'-->).*?(<!--/FILL-->)', lambda m:m.group(1)+inner+m.group(2), h, count=1, flags=re.S)
 
+def drop_section(h, marker):
+    """Remove a whole <tr> section that starts at '<!-- marker -->' and runs to the next HTML comment marker."""
+    return re.sub(r'[ \t]*<!-- '+re.escape(marker)+r' -->.*?(?=[ \t]*<!-- )', '', h, count=1, flags=re.S)
+
+def _empty(x, key="title"):
+    return (not x) or not str(x.get(key,"")).strip()
+
 def data_uri(p):
     with open(p,"rb") as f: return "data:image/png;base64,"+base64.b64encode(f.read()).decode()
 
@@ -241,11 +248,13 @@ def main():
     t=fill(t,"EVENTS",r_events(c.get("events",[])))
     t=fill(t,"BLOG",r_blog(c.get("blog",[])))
     t=fill(t,"STOREFRONT",r_feature(c["storefront"],c["storefront"].get("cta","Read their story")))
-    t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
+    if _empty(c.get("bright_spot")): t=drop_section(t,"THE BRIGHT SPOT")
+    else: t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
     t=fill(t,"GUIDE",r_guide(c["guide"]))
     t=fill(t,"REALESTATE",r_realestate(c.get("real_estate",{}),S,re_cfg))
     t=fill(t,"DEALS",r_deals(c.get("deals",[])))
-    t=fill(t,"GIVEAWAY",r_giveaway(c["giveaway"]))
+    if _empty(c.get("giveaway")) : t=drop_section(t,"OUR TREAT")
+    else: t=fill(t,"GIVEAWAY",r_giveaway(c["giveaway"]))
     t=fill(t,"DIDYOUKNOW",r_dyk(c["did_you_know"]))
     t=fill(t,"ALIST",r_alist(c.get("alist",[])))
 
