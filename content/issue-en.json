@@ -30,9 +30,9 @@
     },
     {
       "day": "Sat",
-      "name": "Clermont Celebrates: Snow and Santa",
-      "meta": "Downtown Clermont · 2 PM",
-      "url": "https://www.livethecelebrationlife.com/events/clermont-celebrates-2026-snow-and-santa-nov-21"
+      "name": "Fall Fitness Fest: Free Outdoor Classes",
+      "meta": "Promenade at Sunset Walk · 9 AM",
+      "url": "https://www.livethecelebrationlife.com/events/fall-fitness-fest-free-outdoor-classes-at-sunset-walk-nov-21"
     },
     {
       "day": "Sun",
@@ -43,28 +43,22 @@
   ],
   "blog": [
     {
-      "title": "Celebration Community Chorus: Join the Choir in Celebration FL",
-      "tease": "Love to sing? Here's how to find your harmony with the neighbors.",
-      "url": "https://www.livethecelebrationlife.com/blog/celebration-community-chorus-join-the-choir-in-celebration-fl"
+      "title": "Kids Eat Free Nights Near Celebration FL",
+      "tease": "Every night of the week, sorted — where the little ones eat on the house.",
+      "url": "https://www.livethecelebrationlife.com/blog/kids-eat-free-nights-near-celebration-fl"
     },
     {
-      "title": "Is a Florida State Parks Pass Worth It for Celebration Families?",
-      "tease": "We break down whether the annual pass pays off for your crew.",
-      "url": "https://www.livethecelebrationlife.com/blog/is-a-florida-state-parks-pass-worth-it-for-celebration-families"
+      "title": "The Best Dog Groomers Near Celebration FL",
+      "tease": "Bath, trim and a bandana: the local groomers pups (and owners) love.",
+      "url": "https://www.livethecelebrationlife.com/blog/the-best-dog-groomers-near-celebration-fl"
     },
     {
-      "title": "How to See an Osceola Magic Game From Celebration FL",
-      "tease": "G League hoops are right down the road — here's how to catch a game.",
-      "url": "https://www.livethecelebrationlife.com/blog/how-to-see-an-osceola-magic-game-from-celebration-fl"
+      "title": "Martial Arts Studios Near Celebration FL",
+      "tease": "Karate, jiu-jitsu, taekwondo — where kids and grown-ups can kick things off.",
+      "url": "https://www.livethecelebrationlife.com/blog/martial-arts-studios-near-celebration-fl"
     }
   ],
-  "storefront": {
-    "title": "Slim Chickens, Fatburger & Bubbakoo's Burritos are now open at Celebration Pointe",
-    "body": "Three new spots just opened their doors at Celebration Pointe — Slim Chickens, Fatburger, and Bubbakoo's Burritos. Here's the scoop on what's new in the neighborhood.",
-    "url": "https://www.livethecelebrationlife.com/blog/slim-chickens-fatburger-and-bubbakoos-burritos-now-open-at-celebration-pointe",
-    "photo_url": "https://www.livethecelebrationlife.com/uploads/news-pictures/pphoto-1086-tom2uief376cd5.webp",
-    "cta": "Read the story"
-  },
+  "storefront": {},
   "bright_spot": {},
   "guide": {
     "label": "The Bright Pages",
@@ -82,16 +76,16 @@
       "url": "https://www.livethecelebrationlife.com/coupons/35-thanksgiving-dinner-at-columbia-restaurant-celebration"
     },
     {
-      "name": "Celebration Golf Club",
-      "desc": "25% off with the Florida Elite Card",
-      "tag": "25% OFF",
-      "url": "https://www.livethecelebrationlife.com/coupons/florida-elite-card-25-off-at-celebration-golf-club"
+      "name": "Gator's Dockside Hunter's Creek",
+      "desc": "Kids eat free on Tuesdays — through Dec 16",
+      "tag": "KIDS FREE",
+      "url": "https://www.livethecelebrationlife.com/coupons/kids-eat-free-tuesdays-at-gators-dockside-hunters-creek"
     },
     {
-      "name": "Club Pilates Celebration",
-      "desc": "Free intro class for newcomers",
+      "name": "Celebration Martial Arts Academy",
+      "desc": "Free intro classes to try it out",
       "tag": "FREE",
-      "url": "https://www.livethecelebrationlife.com/coupons/free-intro-class-at-club-pilates-celebration-1022"
+      "url": "https://www.livethecelebrationlife.com/coupons/free-intro-classes-at-celebration-martial-arts-academy"
     }
   ],
   "alist": [
@@ -118,5 +112,6 @@
   "did_you_know": {
     "headline": "Celebration's downtown was designed to be fully walkable.",
     "body": "From the lakefront to Market Street, almost everything's a stroll away — by design."
-  }
+  },
+  "app_feature": {}
 }

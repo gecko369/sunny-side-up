@@ -30,9 +30,9 @@
     },
     {
       "day": "Sáb",
-      "name": "Clermont Celebrates: neve e Papai Noel",
-      "meta": "Centro de Clermont · 14h",
-      "url": "https://www.livethecelebrationlife.com/events/clermont-celebrates-2026-snow-and-santa-nov-21"
+      "name": "Fall Fitness Fest: aulas ao ar livre grátis",
+      "meta": "Promenade at Sunset Walk · 9 AM",
+      "url": "https://www.livethecelebrationlife.com/events/fall-fitness-fest-free-outdoor-classes-at-sunset-walk-nov-21"
     },
     {
       "day": "Dom",
@@ -43,28 +43,22 @@
   ],
   "blog": [
     {
-      "title": "Celebration Community Chorus: participe do coral em Celebration, FL",
-      "tease": "Gosta de cantar? Veja como encontrar sua harmonia com os vizinhos.",
-      "url": "https://www.livethecelebrationlife.com/blog/celebration-community-chorus-join-the-choir-in-celebration-fl"
+      "title": "Noites de 'Kids Eat Free' perto de Celebration, FL",
+      "tease": "Toda noite da semana, organizada: onde a criançada come de graça.",
+      "url": "https://www.livethecelebrationlife.com/blog/kids-eat-free-nights-near-celebration-fl"
     },
     {
-      "title": "O passe dos parques estaduais da Flórida vale a pena para as famílias de Celebration?",
-      "tease": "Analisamos se o passe anual compensa para a sua turma.",
-      "url": "https://www.livethecelebrationlife.com/blog/is-a-florida-state-parks-pass-worth-it-for-celebration-families"
+      "title": "Os melhores banho e tosa perto de Celebration, FL",
+      "tease": "Banho, tosa e bandana: os groomers locais que cães (e donos) adoram.",
+      "url": "https://www.livethecelebrationlife.com/blog/the-best-dog-groomers-near-celebration-fl"
     },
     {
-      "title": "Como assistir a um jogo do Osceola Magic a partir de Celebration, FL",
-      "tease": "O basquete da Liga G fica pertinho: veja como ir a um jogo.",
-      "url": "https://www.livethecelebrationlife.com/blog/how-to-see-an-osceola-magic-game-from-celebration-fl"
+      "title": "Academias de artes marciais perto de Celebration, FL",
+      "tease": "Karatê, jiu-jítsu, taekwondo: onde crianças e adultos podem começar.",
+      "url": "https://www.livethecelebrationlife.com/blog/martial-arts-studios-near-celebration-fl"
     }
   ],
-  "storefront": {
-    "title": "Slim Chickens, Fatburger e Bubbakoo's Burritos já abriram no Celebration Pointe",
-    "body": "Três novos lugares abriram as portas no Celebration Pointe: Slim Chickens, Fatburger e Bubbakoo's Burritos. Aqui vai a novidade do bairro.",
-    "url": "https://www.livethecelebrationlife.com/blog/slim-chickens-fatburger-and-bubbakoos-burritos-now-open-at-celebration-pointe",
-    "photo_url": "https://www.livethecelebrationlife.com/uploads/news-pictures/pphoto-1086-tom2uief376cd5.webp",
-    "cta": "Leia a história"
-  },
+  "storefront": {},
   "bright_spot": {},
   "guide": {
     "label": "The Bright Pages",
@@ -82,16 +76,16 @@
       "url": "https://www.livethecelebrationlife.com/coupons/35-thanksgiving-dinner-at-columbia-restaurant-celebration"
     },
     {
-      "name": "Celebration Golf Club",
-      "desc": "25% de desconto com o Florida Elite Card",
-      "tag": "25% OFF",
-      "url": "https://www.livethecelebrationlife.com/coupons/florida-elite-card-25-off-at-celebration-golf-club"
+      "name": "Gator's Dockside Hunter's Creek",
+      "desc": "Crianças comem de graça às terças — até 16 de dez",
+      "tag": "KIDS FREE",
+      "url": "https://www.livethecelebrationlife.com/coupons/kids-eat-free-tuesdays-at-gators-dockside-hunters-creek"
     },
     {
-      "name": "Club Pilates Celebration",
-      "desc": "Aula de introdução grátis para novos alunos",
+      "name": "Celebration Martial Arts Academy",
+      "desc": "Aulas introdutórias grátis para experimentar",
       "tag": "FREE",
-      "url": "https://www.livethecelebrationlife.com/coupons/free-intro-class-at-club-pilates-celebration-1022"
+      "url": "https://www.livethecelebrationlife.com/coupons/free-intro-classes-at-celebration-martial-arts-academy"
     }
   ],
   "alist": [
@@ -118,5 +112,6 @@
   "did_you_know": {
     "headline": "O centro de Celebration foi projetado para ser percorrido a pé.",
     "body": "Do lago à Market Street, quase tudo fica a poucos passos — de propósito."
-  }
+  },
+  "app_feature": {}
 }
