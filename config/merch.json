@@ -1,0 +1,67 @@
+{
+  "_comment": "Merch shown in Latest Gear Drop. Each issue shows 2 items: one from 'apparel' (hoodie or tee) and one from 'hats', rotating weekly by ISO week. Add or remove items here as the Sticker Mule store changes.",
+  "apparel": [
+    {
+      "name": "Color Logo Hoodie",
+      "price": "$50",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20642515",
+      "image_url": "https://cdn.stickermule.com/artworks/df3f57ff-3b43-4148-8309-ea4bc6dce292/large.png"
+    },
+    {
+      "name": "Black Tee, Color Logo",
+      "price": "$30",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20642510",
+      "image_url": "https://cdn.stickermule.com/artworks/fd5b9063-4546-40f6-b254-c94f6c7d4831/large.png"
+    },
+    {
+      "name": "Black & White Hoodie",
+      "price": "$50",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20642516",
+      "image_url": "https://cdn.stickermule.com/artworks/e21f5b31-e9ca-4289-845a-41be3e4215de/large.png"
+    },
+    {
+      "name": "White Tee, Color Logo",
+      "price": "$30",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20640715",
+      "image_url": "https://cdn.stickermule.com/artworks/5411318f-b114-4ae2-92b9-b1fb65cddf27/large.png"
+    },
+    {
+      "name": "Red Tee",
+      "price": "$30",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20642513",
+      "image_url": "https://cdn.stickermule.com/artworks/260859f0-8000-4a2b-87d9-6f64a6d95c8c/large.png"
+    },
+    {
+      "name": "Navy & White Tee",
+      "price": "$30",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20642514",
+      "image_url": "https://cdn.stickermule.com/artworks/c66a754b-f5bb-41df-ab91-c1673795c347/large.png"
+    }
+  ],
+  "hats": [
+    {
+      "name": "Navy Hat",
+      "price": "$35",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20642512",
+      "image_url": "https://cdn.stickermule.com/artworks/957028f3-4e0b-4c7d-8488-e18e8a491d8b/large.png"
+    },
+    {
+      "name": "Celebration Life Hat",
+      "price": "$34",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20640580",
+      "image_url": "https://cdn.stickermule.com/artworks/69c2ea69-0c78-426b-9355-c00b54608358/large.png"
+    },
+    {
+      "name": "Red Hat",
+      "price": "$35",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20642511",
+      "image_url": "https://cdn.stickermule.com/artworks/c36d9a0a-1f42-4f69-aaba-6ee8bd9571bf/large.png"
+    },
+    {
+      "name": "Celebration Life Hat",
+      "price": "$34",
+      "url": "https://www.stickermule.com/thecelebrationlife/item/20640724",
+      "image_url": "https://cdn.stickermule.com/artworks/aedf97c3-2818-44a1-b12a-7ea2ac03b0aa/large.png"
+    }
+  ]
+}

@@ -182,14 +182,14 @@ def r_feature(f, cta):
 
 def r_spotlight(f, S):
     """Business Spotlight: large paid-feature block (logo/photo, headline, body, highlights, button)."""
-    photo = f'<tr><td><img src="{esc(f["photo_url"])}" width="540" alt="{esc(f.get("name",""))}" style="width:100%;height:auto;display:block;border-bottom:1px solid #ECE3D4;"></td></tr>' if f.get("photo_url") else ""
-    hl="".join(f'<tr><td width="26" valign="top" style="font-size:15px;padding:3px 0;color:#15C4AF;">&#10004;</td><td style="font-size:14px;line-height:1.5;color:#1d2b34;padding:3px 0;">{esc(h)}</td></tr>' for h in f.get("highlights",[]))
+    photo = f'<tr><td><img src="{esc(f["photo_url"])}" width="540" alt="{esc(f.get("name",""))}" style="width:100%;height:auto;display:block;"></td></tr>' if f.get("photo_url") else ""
+    hl="".join(f'<tr><td width="26" valign="top" style="font-size:15px;padding:3px 0;color:#FFCA08;">&#10004;</td><td style="font-size:14px;line-height:1.5;color:#FFFFFF;padding:3px 0;">{esc(h)}</td></tr>' for h in f.get("highlights",[]))
     hl=f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 14px;font-family:{BODY};">{hl}</table>' if hl else ""
-    name=f'<div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#15C4AF;padding-bottom:4px;">{esc(f["name"])}</div>' if f.get("name") else ""
+    name=f'<div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#FFCA08;padding-bottom:4px;">{esc(f["name"])}</div>' if f.get("name") else ""
     title=f'<div style="font-family:{DISPLAY};font-size:24px;font-weight:700;color:#0D3347;padding:2px 0 12px;line-height:1.15;">{esc(f["title"])}</div>'
     btn=f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#F58220" style="border-radius:999px;"><a href="{esc(f.get("url","#"))}" style="display:inline-block;padding:12px 26px;font-family:{BODY};font-size:15px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:999px;">{esc(f.get("cta","Learn more"))} &rarr;</a></td></tr></table>'
-    card=(f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background:#FFFFFF;border:2px solid #F58220;border-radius:16px;overflow:hidden;">'+photo
-          +f'<tr><td style="padding:20px 22px 22px;font-family:{BODY};">{name}<div style="font-size:15px;line-height:1.55;color:#1d2b34;padding-bottom:10px;">{esc(f.get("body",""))}</div>{hl}{btn}</td></tr></table>')
+    card=(f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#0D3347" style="background:#0D3347;border-radius:16px;overflow:hidden;">'+photo
+          +f'<tr><td style="padding:20px 22px 22px;font-family:{BODY};">{name}<div style="font-size:15px;line-height:1.55;color:#E3EEF4;padding-bottom:10px;">{esc(f.get("body",""))}</div>{hl}{btn}</td></tr></table>')
     return title+card
 
 def r_guide(g):
@@ -235,13 +235,20 @@ def r_appfeature(f):
 def drop_section(h,name):
     return re.sub(r'  <!--SECTION:'+name+r'-->.*?<!--/SECTION:'+name+r'-->\n','',h,count=1,flags=re.S)
 
+def issue_week(c):
+    """ISO week of the issue date (content 'issue_date' YYYY-MM-DD if present, else today)."""
+    import datetime
+    try: d=datetime.date.fromisoformat(str(c.get("issue_date"))[:10])
+    except Exception: d=datetime.date.today()
+    return d.isocalendar()[1]
+
 def r_merch(items):
     """Optional product tiles (name, url, image_url, price). Empty list = just the store button."""
     items=[m for m in items if m.get("name") and m.get("url")][:3]
     if not items: return ""
     w=int(100/len(items))
     cells="".join(f'<td class="stack" width="{w}%" valign="top" align="center" style="padding:0 6px 12px;"><a href="{esc(m["url"])}" style="text-decoration:none;">'
-                  +(f'<img src="{esc(m["image_url"])}" width="140" alt="{esc(m["name"])}" style="width:140px;max-width:100%;height:auto;display:block;margin:0 auto 6px;border-radius:10px;">' if m.get("image_url") else "")
+                  +(f'<img src="{esc(m["image_url"])}" width="200" alt="{esc(m["name"])}" style="width:200px;max-width:100%;height:auto;display:block;margin:0 auto 8px;border-radius:12px;background:#FFFFFF;">' if m.get("image_url") else "")
                   +f'<strong style="color:#0D3347;font-size:14px;">{esc(m["name"])}</strong>'+(f'<br><span style="color:#5D7079;font-size:13px;">{esc(m["price"])}</span>' if m.get("price") else "")+'</a></td>' for m in items)
     return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:{BODY};"><tr>{cells}</tr></table>'
 
@@ -292,7 +299,12 @@ def main():
         for x in nb: x.setdefault("cta",S["S_NEWBIZ_CTA"])
         t=fill(t,"NEWBIZ",r_alist(nb))
     else: t=drop_section(t,"NEWBIZ")
-    t=fill(t,"MERCH",r_merch(c.get("merch") or []))
+    merch=c.get("merch") or []
+    mp=os.path.join(here,"config","merch.json")
+    if not merch and os.path.exists(mp):
+        mc=json.load(open(mp,encoding="utf-8")); wk=issue_week(c)
+        merch=[g[wk%len(g)] for g in (mc.get("apparel") or [], mc.get("hats") or []) if g]
+    t=fill(t,"MERCH",r_merch(merch))
     if (c.get("bright_spot") or {}).get("title"): t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
     af=c.get("app_feature") or {}
     if af.get("title"): t=fill(t,"APPFEATURE",r_appfeature(af))
