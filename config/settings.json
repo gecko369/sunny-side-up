@@ -53,9 +53,47 @@
     "nominate": "https://www.livethecelebrationlife.com/nominate",
     "list_business": "https://www.livethecelebrationlife.com/join",
     "app_ios": "https://www.livethecelebrationlife.com/app",
-    "app_android": "https://www.livethecelebrationlife.com/app"
+    "app_android": "https://www.livethecelebrationlife.com/app",
+    "merch": "https://www.stickermule.com/thecelebrationlife"
   },
   "app": {
     "_comment": "Set links.app_ios and links.app_android to the real store URLs when the app is live."
+  },
+  "business_spotlight": {
+    "_comment": "Default Business Spotlight, used when the sheet's Storefront cells are blank. A sold spotlight replaces this (via the sheet or by editing here). Remove 'title' to turn the default off.",
+    "name": "StarLift by Geckonaut AI",
+    "url": "https://geckonautai.com/starlift",
+    "photo_url": "https://geckonautai.com/starlift-og.png",
+    "title": "Turn your customers into your ranking engine",
+    "cta": "Get your free reputation report",
+    "body": "Local business owners, this one's for you. StarLift helps you collect more 5-star reviews, climb Google Maps, and show up when folks ask AI where to go. It runs in the background while you run your business.",
+    "highlights": [
+      "Automatic review requests by text and email after every job",
+      "AI-written replies to every review",
+      "Tracks your ranking on Google Maps and in AI search",
+      "Live within 48 hours"
+    ],
+    "es": {
+      "title": "Convierte a tus clientes en tu motor de posicionamiento",
+      "cta": "Pide tu reporte de reputación gratis",
+      "body": "Dueños de negocios locales, esto es para ustedes. StarLift te ayuda a conseguir más reseñas de 5 estrellas, subir en Google Maps y aparecer cuando la gente le pregunta a la IA a dónde ir. Trabaja en segundo plano mientras tú atiendes tu negocio.",
+      "highlights": [
+        "Solicitudes de reseñas automáticas por texto y correo después de cada trabajo",
+        "Respuestas a cada reseña escritas con IA",
+        "Sigue tu posición en Google Maps y en búsquedas con IA",
+        "Activo en 48 horas"
+      ]
+    },
+    "pt": {
+      "title": "Transforme seus clientes no seu motor de ranqueamento",
+      "cta": "Peça seu relatório de reputação grátis",
+      "body": "Donos de negócios locais, esta é para vocês. O StarLift ajuda você a conquistar mais avaliações 5 estrelas, subir no Google Maps e aparecer quando as pessoas perguntam à IA aonde ir. Ele trabalha em segundo plano enquanto você cuida do seu negócio.",
+      "highlights": [
+        "Pedidos de avaliação automáticos por SMS e e-mail após cada serviço",
+        "Respostas a cada avaliação escritas por IA",
+        "Acompanha sua posição no Google Maps e nas buscas com IA",
+        "No ar em 48 horas"
+      ]
+    }
   }
 }

@@ -36,6 +36,12 @@ Using the Brilliant Directories connector (website_id in `settings.json` → `bd
 - **Storefront** (business spotlight) and **Bright Spot** (resident/nonprofit): write `title`, `body`, `cta`, `url`, **and `photo_url`**. The image **must come from the post itself**, taken as a full `https://…` URL in this order: (1) the post's featured-image field (e.g. `featured_image` / `image` / `photo` / `thumbnail` / `main_image` / `post_image`); (2) if none, the `src` of the first `<img>` in the post body HTML; (3) if none, fetch the post URL and read its `og:image` meta tag. Convert any relative path to an absolute `https://` URL using the site domain. **Never substitute a stock photo (Pexels, Unsplash, or any placeholder) or any image that does not belong to that post.** If the post has no image of its own, set `photo_url` to `""`.
 Keep it factual — only use what's really on the site.
 
+## Step 2b — Business Spotlight, new businesses, merch
+- **Business Spotlight** (the Storefront slot, shown large with an orange border): if the sheet's Storefront cells are filled, write `storefront` with `name`, `title`, `body`, `url`, `photo_url`, `cta`, plus `highlights` (3-4 short benefit lines) so it renders as a spotlight. If the cells are blank, leave `storefront` as `{}`: `assemble.py` then uses the default spotlight in `config/settings.json` -> `business_spotlight` (currently StarLift by Geckonaut AI, already translated). Do not rewrite or translate the default.
+- **New in the Neighborhood** (`new_members`, 2-3 items): the newest business listings on the BD site. Use `listUsers` ordered by `signup_date` DESC with `active` = 2, and keep only real, complete listings: a business name in `company`, a real logo/photo (`image_main_file` is NOT the `profile-profile-holder.png` placeholder), and nothing that looks like a test or spam account. Only include businesses that joined in the last 45 days and were not welcomed in a previous issue (check earlier `issues/*/` builds). Each item: `name`, `cat` (category · city), `desc` (one short line from their profile, or empty), `emoji`, `url` (site domain + `filename`). If fewer than 2 qualify, set `new_members` to `[]` and the section is dropped. These are in addition to Locally Loved (`alist`), which stays as is.
+- **Latest Gear Drop** (merch): always shown, linking to `links.merch`. Optionally set `merch` to up to 3 items (`name`, `url`, `image_url`, `price`) when you can confirm real products and image URLs from the store; otherwise leave it out and only the store button shows. Never invent products.
+- **Get Found** (advertise block): fixed text, links to `links.list_business`. Nothing to write.
+
 ## Step 3 — (removed) Real estate
 The real-estate section has been removed from the newsletter. Do not write `real_estate` content; leave it out or `{}`.
 
@@ -66,6 +72,9 @@ Copy `issue-en.json` to `issue-es.json` and `issue-pt.json`. In each copy, trans
 - `storefront` / `bright_spot`: `title`, `body`, `cta` (leave `photo_url` and `url` as-is)
 - `guide`: `title`, `body`, `cta` (leave `label` in English — it's mapped automatically)
 - `app_feature` (if present): `title`, `body`, `cta`
+- `storefront` when it comes from the sheet: also `highlights[]`
+- `new_members[]`: `cat`, `desc` (keep business `name` as-is)
+- `merch[]`: `name` only if descriptive
 - `deals[]`: `name` (if it's descriptive), `desc`; keep brand names and the short `tag` as-is
 - `alist[]`: `cat`, `desc`, `cta` (keep business `name` as-is)
 - `giveaway`: `title`, `body`, `cta`

@@ -41,6 +41,7 @@ STRINGS = {
  "S_INV2_T":"Nominate a neighbor","S_INV2_D":"Know a great local, business, or cause? Tell us who and why.",
  "S_INV3_T":"Is your business on the map?","S_INV3_D":"Get found by neighbors searching for what you do. List free in minutes.",
  "S_EY_APP":"New &middot; The app is here","S_APPF_H":"The whole town, right in your pocket","S_APPF_D":"Events, sweet deals, local favorites and me, Sunni, all in one tap. Download the free Celebration Life app and never miss what's happening around town.",
+ "S_EY_NEWBIZ":"New in the Neighborhood","S_SUB_NEWBIZ":"Say hello to our newest businesses","S_DESC_NEWBIZ":"Fresh faces on The Celebration Life. Stop by, say hi, and tell them Sunni sent you.","S_NEWBIZ_CTA":"Check them out","S_EY_SPOTLIGHT":"Business Spotlight","S_EY_MERCH":"Latest Gear Drop","S_MERCH_T":"Rep your town","S_MERCH_D":"Stickers, tees and more made for folks who love living the Celebration life. Grab the newest drop before it's gone.","S_MERCH_BTN":"Shop the gear","S_EY_ADV":"For local businesses","S_ADV_T":"Get found by your neighbors","S_ADV_D":"Put your business in front of thousands of locals every month, right here in Sunny Side Up, on our website and socials, and in our community guides.","S_ADV_BTN":"Get featured",
  "S_ASK_BADGE":"Ask Sunni","S_ASK_T":"Ask Sunni — by voice, call or text",
  "S_ASK_D":"Your Celebration concierge, hunni. Talk to me, text me, or tap to chat on your phone or in the app — ask what's happening this weekend, the nearest open chiropractor, or a few painters with good reviews. Want the latest right now? Call me directly. I speak many languages, so ask in whichever feels like home.",
  "S_ASK_CALL":"Call Sunni: 321-844-7724",
@@ -74,6 +75,7 @@ STRINGS = {
  "S_INV2_T":"Nomina a un vecino","S_INV2_D":"¿Conoces a un buen vecino, negocio o causa? Cuéntanos quién y por qué.",
  "S_INV3_T":"¿Tu negocio está en el mapa?","S_INV3_D":"Que los vecinos te encuentren cuando buscan lo que ofreces. Regístrate gratis en minutos.",
  "S_EY_APP":"Nuevo &middot; Ya llegó la app","S_APPF_H":"Todo el pueblo, en tu bolsillo","S_APPF_D":"Eventos, ofertas, favoritos locales y yo, Sunni, todo en un toque. Descarga gratis la app de The Celebration Life y no te pierdas nada de lo que pasa en el pueblo.",
+ "S_EY_NEWBIZ":"Nuevos en el vecindario","S_SUB_NEWBIZ":"Saluda a nuestros negocios más nuevos","S_DESC_NEWBIZ":"Caras nuevas en The Celebration Life. Pasa a saludar y diles que te mandó Sunni.","S_NEWBIZ_CTA":"Conócelos","S_EY_SPOTLIGHT":"Negocio destacado","S_EY_MERCH":"Lo último en mercancía","S_MERCH_T":"Representa a tu pueblo","S_MERCH_D":"Calcomanías, camisetas y más para quienes aman vivir la vida en Celebration. Llévate lo más nuevo antes de que se acabe.","S_MERCH_BTN":"Ver la tienda","S_EY_ADV":"Para negocios locales","S_ADV_T":"Haz que tus vecinos te encuentren","S_ADV_D":"Pon tu negocio frente a miles de vecinos cada mes: aquí en Sunny Side Up, en nuestro sitio web y redes, y en nuestras guías comunitarias.","S_ADV_BTN":"Quiero destacar",
  "S_ASK_BADGE":"Pregúntale a Sunni","S_ASK_T":"Pregúntale a Sunni — por voz, llamada o texto",
  "S_ASK_D":"Tu concierge de Celebration, hunni. Háblame, escríbeme o toca para chatear desde tu teléfono o la app — pregúntame qué hacer este fin de semana, el quiropráctico abierto más cercano o unos pintores bien recomendados. ¿Quieres lo último ahora mismo? Llámame directamente. Hablo muchos idiomas, así que pregunta en el que te haga sentir en casa.",
  "S_ASK_CALL":"Llama a Sunni: 321-844-7724",
@@ -107,6 +109,7 @@ STRINGS = {
  "S_INV2_T":"Indique um vizinho","S_INV2_D":"Conhece um bom vizinho, negócio ou causa? Conte pra gente quem e por quê.",
  "S_INV3_T":"Seu negócio está no mapa?","S_INV3_D":"Seja encontrado pelos vizinhos que procuram o que você faz. Cadastre-se grátis em minutos.",
  "S_EY_APP":"Novo &middot; O app chegou","S_APPF_H":"A cidade inteira, no seu bolso","S_APPF_D":"Eventos, ofertas, favoritos locais e eu, a Sunni, tudo em um toque. Baixe grátis o app do The Celebration Life e não perca nada do que acontece na cidade.",
+ "S_EY_NEWBIZ":"Novos na vizinhança","S_SUB_NEWBIZ":"Dê as boas-vindas aos nossos novos negócios","S_DESC_NEWBIZ":"Caras novas no The Celebration Life. Passe para dar um oi e diga que a Sunni mandou você.","S_NEWBIZ_CTA":"Conheça","S_EY_SPOTLIGHT":"Negócio em destaque","S_EY_MERCH":"Novidades da loja","S_MERCH_T":"Represente a sua cidade","S_MERCH_D":"Adesivos, camisetas e mais para quem ama viver a vida em Celebration. Garanta as novidades antes que acabem.","S_MERCH_BTN":"Ver a loja","S_EY_ADV":"Para negócios locais","S_ADV_T":"Seja encontrado pelos seus vizinhos","S_ADV_D":"Coloque o seu negócio diante de milhares de moradores todo mês: aqui no Sunny Side Up, no nosso site e redes sociais, e nos nossos guias da comunidade.","S_ADV_BTN":"Quero aparecer",
  "S_ASK_BADGE":"Pergunte à Sunni","S_ASK_T":"Pergunte à Sunni — por voz, ligação ou texto",
  "S_ASK_D":"Sua concierge de Celebration, hunni. Fale comigo, mande uma mensagem ou toque para conversar no celular ou no app — pergunte o que rola neste fim de semana, o quiroprático aberto mais perto ou uns pintores bem avaliados. Quer as novidades agora? Ligue direto para mim. Eu falo vários idiomas, então pergunte no que faz você se sentir em casa.",
  "S_ASK_CALL":"Ligue para a Sunni: 321-844-7724",
@@ -177,6 +180,18 @@ def r_feature(f, cta):
           + f'<tr><td style="padding:18px 20px;font-family:{BODY};"><div style="font-size:15px;line-height:1.55;color:#1d2b34;padding-bottom:8px;">{esc(f.get("body",""))}</div><a href="{esc(f.get("url","#"))}" style="color:#15C4AF;font-weight:700;font-size:14px;">{esc(cta)} &rarr;</a></td></tr></table>')
     return title+card
 
+def r_spotlight(f, S):
+    """Business Spotlight: large paid-feature block (logo/photo, headline, body, highlights, button)."""
+    photo = f'<tr><td><img src="{esc(f["photo_url"])}" width="540" alt="{esc(f.get("name",""))}" style="width:100%;height:auto;display:block;border-bottom:1px solid #ECE3D4;"></td></tr>' if f.get("photo_url") else ""
+    hl="".join(f'<tr><td width="26" valign="top" style="font-size:15px;padding:3px 0;color:#15C4AF;">&#10004;</td><td style="font-size:14px;line-height:1.5;color:#1d2b34;padding:3px 0;">{esc(h)}</td></tr>' for h in f.get("highlights",[]))
+    hl=f'<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:4px 0 14px;font-family:{BODY};">{hl}</table>' if hl else ""
+    name=f'<div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#15C4AF;padding-bottom:4px;">{esc(f["name"])}</div>' if f.get("name") else ""
+    title=f'<div style="font-family:{DISPLAY};font-size:24px;font-weight:700;color:#0D3347;padding:2px 0 12px;line-height:1.15;">{esc(f["title"])}</div>'
+    btn=f'<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#F58220" style="border-radius:999px;"><a href="{esc(f.get("url","#"))}" style="display:inline-block;padding:12px 26px;font-family:{BODY};font-size:15px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:999px;">{esc(f.get("cta","Learn more"))} &rarr;</a></td></tr></table>'
+    card=(f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background:#FFFFFF;border:2px solid #F58220;border-radius:16px;overflow:hidden;">'+photo
+          +f'<tr><td style="padding:20px 22px 22px;font-family:{BODY};">{name}<div style="font-size:15px;line-height:1.55;color:#1d2b34;padding-bottom:10px;">{esc(f.get("body",""))}</div>{hl}{btn}</td></tr></table>')
+    return title+card
+
 def r_guide(g):
     return (f'<div style="font-family:{DISPLAY};font-size:23px;font-weight:700;color:#0D3347;padding:2px 0 10px;">{esc(g["title"])}</div>'
             f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFF6D8" style="background:#FFF6D8;border:1px solid #F3E3A8;border-radius:16px;"><tr><td style="padding:20px;font-family:{BODY};"><div style="font-size:15px;line-height:1.55;color:#1d2b34;padding-bottom:12px;">{esc(g.get("body",""))}</div><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#F58220" style="border-radius:999px;"><a href="{esc(g.get("url","#"))}" style="display:inline-block;padding:12px 26px;font-family:{BODY};font-size:14px;font-weight:700;color:#FFFFFF;text-decoration:none;border-radius:999px;">{esc(g.get("cta","Get the free guide"))} &rarr;</a></td></tr></table></td></tr></table>')
@@ -220,6 +235,16 @@ def r_appfeature(f):
 def drop_section(h,name):
     return re.sub(r'  <!--SECTION:'+name+r'-->.*?<!--/SECTION:'+name+r'-->\n','',h,count=1,flags=re.S)
 
+def r_merch(items):
+    """Optional product tiles (name, url, image_url, price). Empty list = just the store button."""
+    items=[m for m in items if m.get("name") and m.get("url")][:3]
+    if not items: return ""
+    w=int(100/len(items))
+    cells="".join(f'<td class="stack" width="{w}%" valign="top" align="center" style="padding:0 6px 12px;"><a href="{esc(m["url"])}" style="text-decoration:none;">'
+                  +(f'<img src="{esc(m["image_url"])}" width="140" alt="{esc(m["name"])}" style="width:140px;max-width:100%;height:auto;display:block;margin:0 auto 6px;border-radius:10px;">' if m.get("image_url") else "")
+                  +f'<strong style="color:#0D3347;font-size:14px;">{esc(m["name"])}</strong>'+(f'<br><span style="color:#5D7079;font-size:13px;">{esc(m["price"])}</span>' if m.get("price") else "")+'</a></td>' for m in items)
+    return f'<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:{BODY};"><tr>{cells}</tr></table>'
+
 def r_dyk(d):
     return (f'<div style="font-size:16px;font-weight:700;color:#0D3347;padding:6px 0 4px;">{esc(d["headline"])}</div>'
             f'<div style="font-size:13px;color:#5D7079;">{esc(d.get("body",""))}</div>')
@@ -253,9 +278,21 @@ def main():
     t=fill(t,"TOPBILLING",r_topbilling(c["top_billing"]))
     t=fill(t,"EVENTS",r_events(c.get("events",[])))
     t=fill(t,"BLOG",r_blog(c.get("blog",[])))
+    if not (c.get("storefront") or {}).get("title") and (s.get("business_spotlight") or {}).get("title"):
+        bs=s["business_spotlight"]; c["storefront"]=dict(bs.get(a.lang) or bs); c["storefront"].update({k:bs[k] for k in ("url","photo_url","name") if k in bs}); c["storefront"]["spotlight"]=True
+    if (c.get("storefront") or {}).get("spotlight") or (c.get("storefront") or {}).get("highlights"):
+        t=t.replace("{{S_EY_STOREFRONT}}","{{S_EY_SPOTLIGHT}}")
     for key,ck in [("STOREFRONT","storefront"),("BRIGHTSPOT","bright_spot"),("GIVEAWAY","giveaway")]:
         if not (c.get(ck) or {}).get("title"): t=drop_section(t,key)
-    if (c.get("storefront") or {}).get("title"): t=fill(t,"STOREFRONT",r_feature(c["storefront"],c["storefront"].get("cta","Read their story")))
+    sf=c.get("storefront") or {}
+    if sf.get("title"):
+        t=fill(t,"STOREFRONT",r_spotlight(sf,S) if (sf.get("highlights") or sf.get("spotlight")) else r_feature(sf,sf.get("cta","Read their story")))
+    nb=[x for x in (c.get("new_members") or []) if x.get("name")][:3]
+    if nb:
+        for x in nb: x.setdefault("cta",S["S_NEWBIZ_CTA"])
+        t=fill(t,"NEWBIZ",r_alist(nb))
+    else: t=drop_section(t,"NEWBIZ")
+    t=fill(t,"MERCH",r_merch(c.get("merch") or []))
     if (c.get("bright_spot") or {}).get("title"): t=fill(t,"BRIGHTSPOT",r_feature(c["bright_spot"],c["bright_spot"].get("cta","Read the story")))
     af=c.get("app_feature") or {}
     if af.get("title"): t=fill(t,"APPFEATURE",r_appfeature(af))
@@ -281,7 +318,7 @@ def main():
     links=dict(s.get("links",{})); links.update(c.get("links",{}))
     links.setdefault("facebook_page", links.get("facebook","#"))  # brand page falls back to group if unset
     links.setdefault("app_ios",links.get("app","#")); links.setdefault("app_android",links.get("app","#"))
-    for tok,key in [("APP_IOS_URL","app_ios"),("APP_ANDROID_URL","app_android"),("EVENTS_ALL_URL","events_all"),("BLOG_ALL_URL","blog_all"),("DEALS_ALL_URL","deals_all"),
+    for tok,key in [("MERCH_URL","merch"),("LIST_BUSINESS_URL","list_business"),("APP_IOS_URL","app_ios"),("APP_ANDROID_URL","app_android"),("EVENTS_ALL_URL","events_all"),("BLOG_ALL_URL","blog_all"),("DEALS_ALL_URL","deals_all"),
                     ("ASK_SUNNI_URL","ask_sunni"),("FACEBOOK_URL","facebook"),("FACEBOOK_PAGE_URL","facebook_page"),
                     ("INSTAGRAM_URL","instagram"),("APP_URL","app"),("SUBMIT_URL","submit"),
                     ("NOMINATE_URL","nominate"),("LISTBIZ_URL","list_business")]:
